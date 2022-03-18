@@ -1,0 +1,60 @@
+{
+  "name": "arca",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "engines": {
+    "node": ">=12.0.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "preinstall": "npx only-allow pnpm",
+    "sugar": "pnpm build --filter vite-plugin-sugar && pnpm build --filter vite-plugin-sugar-usage",
+    "commit": "git-cz",
+    "release": "standard-version",
+    "changeset": "changeset"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Spencer17x/arca.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Spencer17x/arca/issues"
+  },
+  "homepage": "https://github.com/Spencer17x/arca#readme",
+  "gitHooks": {
+    "pre-commit": "lint-staged --concurrent false",
+    "commit-msg": "node scripts/verifyCommit.cjs"
+  },
+  "lint-staged": {
+    "*": [
+      "prettier --write --ignore-unknown"
+    ],
+    "packages/*/{src,types}/**/*.ts": [
+      "eslint --ext .ts"
+    ],
+    "packages/**/*.d.ts": [
+      "eslint --ext .ts"
+    ]
+  },
+  "packageManager": "pnpm@6.23.1",
+  "devDependencies": {
+    "@changesets/cli": "^2.21.1",
+    "@commitlint/config-conventional": "^16.2.1",
+    "commitizen": "^4.2.4",
+    "commitlint": "^16.2.1",
+    "cz-conventional-changelog": "^3.3.0",
+    "git-cz": "^4.8.0",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.1.1",
+    "standard-version": "^9.3.2"
+  },
+  "config": {
+    "commitizen": {
+      "path": "git-cz"
+    }
+  }
+}

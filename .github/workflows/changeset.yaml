@@ -1,0 +1,51 @@
+name: Changesets
+on:
+  push:
+    branches:
+      - main
+env:
+  CI: true
+  PNPM_CACHE_FOLDER: .pnpm-store
+jobs:
+  version:
+    timeout-minutes: 15
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout code repository
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: setup node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14
+      - name: install pnpm
+        run: npm i pnpm@latest -g
+      - name: setup npmrc
+        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > .npmrc
+      - name: setup pnpm config
+        run: pnpm config set store-dir $PNPM_CACHE_FOLDER
+      - name: install dependencies
+        run: pnpm install
+      - name: set git config
+        uses: fregante/setup-git-user@v1
+      - name: read package.json
+        uses: tyankatsu0105/read-package-version-actions@v1
+        id: package-version
+      - name: release
+        run: pnpm release -- --release-as ${{ steps.package-version.outputs.version }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+      - name: push tags
+        run: |
+          git push --follow-tags
+      - name: create release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+        with:
+          tag_name: v${{ steps.package-version.outputs.version }}
+          release_name: v${{ steps.package-version.outputs.version }}
+          body_path: CHANGELOG.md
+
+

@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "moduleResolution": "Node",
+    "module":"ESNext",
+    "lib": ["ES2015", "ES2016", "ES2017", "DOM", "ES2020"],
+    "strict": true,
+    "sourceMap": true,
+    "declaration": true,
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "declarationDir": "build/types",
+    "outDir": "build",
+    "downlevelIteration": true
+  },
+  "include": [
+    "src",
+  ]
+}

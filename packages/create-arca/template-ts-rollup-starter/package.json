@@ -1,0 +1,49 @@
+{
+  "name": "--libraryname--",
+  "version": "0.0.0",
+  "main": "build/--libraryname--.umd.js",
+  "module": "build/--libraryname--.esm.js",
+  "typings": "build/types/--libraryname--.d.ts",
+  "author": "--username-- <--usermail-->",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "files": [
+    "build"
+  ],
+  "scripts": {
+    "build:prod": "rimraf build && rollup -c rollup.config.ts --silent --environment NODE_ENV:prod",
+    "build:test": "rimraf build && rollup -c rollup.config.ts --silent --environment NODE_ENV:test",
+    "build:dev": "rimraf build && rollup -c rollup.config.ts --silent --environment NODE_ENV:dev",
+    "test": "jest -c jest.config.ts",
+    "coverage": "jest -c jest.config.ts --coverage",
+    "test:watch": "jest -c jest.config.ts --coverage --watch",
+    "tsc": "tsc -init",
+    "postinstall": "ts-node tools/init"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@rollup/plugin-commonjs": "^19.0.0",
+    "@rollup/plugin-json": "^4.1.0",
+    "@rollup/plugin-node-resolve": "^13.0.0",
+    "@rollup/plugin-replace": "^2.4.2",
+    "@types/jest": "^26.0.23",
+    "@types/node": "^15.12.2",
+    "colors": "^1.4.0",
+    "jest": "^27.0.4",
+    "lodash.camelcase": "^4.3.0",
+    "prompt": "^1.1.0",
+    "replace-in-file": "^6.2.0",
+    "rimraf": "^3.0.2",
+    "rollup": "^2.51.1",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-typescript2": "^0.30.0",
+    "rollup-plugin-uglify": "^6.0.4",
+    "shelljs": "^0.8.4",
+    "ts-jest": "^27.0.3",
+    "ts-node": "^10.0.0",
+    "tslib": "^2.2.0",
+    "typescript": "^4.3.2"
+  }
+}
