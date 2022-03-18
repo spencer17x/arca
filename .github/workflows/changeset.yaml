@@ -32,20 +32,20 @@ jobs:
       - name: read package.json
         uses: tyankatsu0105/read-package-version-actions@v1
         id: package-version
-      - name: release
-        run: pnpm release -- --release-as ${{ steps.package-version.outputs.version }}
-        env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-      - name: push tags
-        run: |
-          git push --follow-tags
-      - name: create release
-        uses: actions/create-release@v1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-        with:
-          tag_name: v${{ steps.package-version.outputs.version }}
-          release_name: v${{ steps.package-version.outputs.version }}
-          body_path: CHANGELOG.md
+#      - name: release
+#        run: pnpm release -- --release-as ${{ steps.package-version.outputs.version }}
+#        env:
+#          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+#      - name: push tags
+#        run: |
+#          git push --follow-tags
+#      - name: create release
+#        uses: actions/create-release@v1
+#        env:
+#          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+#        with:
+#          tag_name: v${{ steps.package-version.outputs.version }}
+#          release_name: v${{ steps.package-version.outputs.version }}
+#          body_path: CHANGELOG.md
 
 
