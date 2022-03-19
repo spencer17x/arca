@@ -28,11 +28,15 @@ async function doBumpPackagesOfType(
   bumpVersionType: BumpVersionType
 ) {
   const packages = bumpPackages.get(bumpVersionType) || [];
+
   if (packages.length) {
+
     console.log(
       green(`Bumping ${bumpVersionType} packages:`)
     );
+
     for (const pkg of packages) {
+
       const output = await run(
         packageManager,
         ['version', bumpVersionType],
@@ -42,6 +46,7 @@ async function doBumpPackagesOfType(
       console.log(
         `${green(`${pkg.packageJson.name}`)}: v${pkg.packageJson.version} => v${nextVersion}`
       );
+
       // git add package.json
       await run(
         'git',
@@ -60,17 +65,21 @@ async function doBumpPackagesOfType(
         ['tag', `${pkg.packageJson.name}@${nextVersion}`],
         { cwd: pkg.dir }
       )
+
     }
   }
 }
 
 async function doBumpPackages(packageManager: Tool, bumpPackages: Map<BumpVersionType, Package[]>) {
+
   console.log();
   console.log(green('Bumping all packages:'));
   console.log();
+
   await doBumpPackagesOfType(packageManager, bumpPackages, 'major');
   await doBumpPackagesOfType(packageManager, bumpPackages, 'minor');
   await doBumpPackagesOfType(packageManager, bumpPackages, 'patch');
+
   console.log();
 }
 

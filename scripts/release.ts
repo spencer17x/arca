@@ -42,6 +42,20 @@ async function main() {
     '--skip-unstable'
   ];
   await run(tool, changelogArgs, { cwd: answer.package.dir });
+
+  // git add CHANGELOG.md
+  await run(
+    'git',
+    ['add', 'CHANGELOG.md'],
+    { cwd: answer.package.dir },
+  );
+  // git commit -m "docs(xxx): CHANGELOG.md"
+  await run(
+    'git',
+    ['commit', '-m', `docs(${answer.package.packageJson.name}): CHANGELOG.md`],
+    { cwd: answer.package.dir },
+  );
+
 }
 
 main().catch((err) => {
