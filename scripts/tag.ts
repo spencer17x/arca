@@ -35,7 +35,7 @@ async function doBumpPackagesOfType(
     for (const pkg of packages) {
       const output = await run(
         packageManager,
-        ['version', bumpVersionType, '--no-git-tag-version'],
+        ['version', bumpVersionType],
         { cwd: pkg.dir, stdio: 'pipe' }
       );
       console.log(
