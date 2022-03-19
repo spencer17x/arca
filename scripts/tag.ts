@@ -38,8 +38,9 @@ async function doBumpPackagesOfType(
         ['version', bumpVersionType],
         { cwd: pkg.dir, stdio: 'pipe' }
       );
+      const nextVersion = output.stdout.replace('v', '');
       console.log(
-        `${green(`${pkg.packageJson.name}`)}: v${pkg.packageJson.version} => ${output.stdout}`
+        `${green(`${pkg.packageJson.name}`)}: v${pkg.packageJson.version} => v${nextVersion}`
       );
       // git add package.json
       await run(
@@ -56,7 +57,7 @@ async function doBumpPackagesOfType(
       // git tag
       await run(
         'git',
-        ['tag', `${pkg.packageJson.name}@${pkg.packageJson.version}`],
+        ['tag', `${pkg.packageJson.name}@${nextVersion}`],
         { cwd: pkg.dir }
       )
     }
