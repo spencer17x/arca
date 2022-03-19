@@ -51,7 +51,7 @@ async function doBumpPackagesOfType(
       // git commit -m "release(xxx): v1.0.0"
       await run(
         'git',
-        ['commit', '-m', `release(${pkg.packageJson.name}): v${pkg.packageJson.version}`],
+        ['commit', '-m', `release(${pkg.packageJson.name}): v${nextVersion}`],
         { cwd: pkg.dir }
       );
       // git tag
