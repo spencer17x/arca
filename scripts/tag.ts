@@ -41,6 +41,24 @@ async function doBumpPackagesOfType(
       console.log(
         `${green(`${pkg.packageJson.name}`)}: v${pkg.packageJson.version} => ${output.stdout}`
       );
+      // git add package.json
+      await run(
+        'git',
+        ['add', 'package.json'],
+        { cwd: pkg.dir }
+      );
+      // git commit -m "release(xxx): v1.0.0"
+      await run(
+        'git',
+        ['commit', '-m', `release(${pkg.packageJson.name}): v${pkg.packageJson.version}`],
+        { cwd: pkg.dir }
+      );
+      // git tag
+      await run(
+        'git',
+        ['tag', `${pkg.packageJson.name}@${pkg.packageJson.version}`],
+        { cwd: pkg.dir }
+      )
     }
   }
 }
