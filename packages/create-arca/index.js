@@ -6,10 +6,6 @@ const prompts = require('prompts');
 const {
   yellow,
   green,
-  cyan,
-  blue,
-  magenta,
-  lightRed,
   red,
   reset,
 } = require('kolorist');
