@@ -1,8 +1,11 @@
 import * as process from 'process';
-import { getPackages, Package } from '@manypkg/get-packages';
+import { getPackages, Package, Tool } from '@manypkg/get-packages';
 // @ts-ignore
 import prompts, { Choice } from 'prompts';
-import { red } from 'kolorist';
+import { green, red } from 'kolorist';
+import { run } from './utils';
+
+type BumpVersionType = 'major' | 'minor' | 'patch' | 'beta' | 'alpha' | 'rc';
 
 function filterChoices(choices: Choice[], selectedChoices: Choice[]): Choice[] {
   return choices.filter(
@@ -12,66 +15,79 @@ function filterChoices(choices: Choice[], selectedChoices: Choice[]): Choice[] {
   );
 }
 
-function packagesToChoices(packages: Package[]): Choice[] {
+function packagesToChoices(packages: Package[] = []): Choice[] {
   return packages.map(pkg => ({
     title: pkg.packageJson.name,
     value: pkg,
   }));
 }
 
+async function doBumpPackagesOfType(
+  packageManager: Tool,
+  bumpPackages: Map<BumpVersionType, Package[]>,
+  bumpVersionType: BumpVersionType
+) {
+  const packages = bumpPackages.get(bumpVersionType) || [];
+  if (packages.length) {
+    console.log(
+      green(`Bumping ${bumpVersionType} packages:`)
+    );
+    for (const pkg of packages) {
+      const output = await run(
+        packageManager,
+        ['version', bumpVersionType, '--no-git-tag-version'],
+        { cwd: pkg.dir, stdio: 'pipe' }
+      );
+      console.log(
+        `${green(`${pkg.packageJson.name}`)}: v${pkg.packageJson.version} => ${output.stdout}`
+      );
+    }
+  }
+}
+
+async function doBumpPackages(packageManager: Tool, bumpPackages: Map<BumpVersionType, Package[]>) {
+  console.log();
+  console.log(green('Bumping all packages:'));
+  console.log();
+  await doBumpPackagesOfType(packageManager, bumpPackages, 'major');
+  await doBumpPackagesOfType(packageManager, bumpPackages, 'minor');
+  await doBumpPackagesOfType(packageManager, bumpPackages, 'patch');
+  console.log();
+}
+
 async function main() {
-  const { tool, root, packages } = await getPackages(process.cwd());
+  const { tool: packageManager, root, packages } = await getPackages(process.cwd());
 
-  let choices: Choice[] = packagesToChoices(packages.concat(root));
+  const choices: Choice[] = packagesToChoices(packages.concat(root));
+  const bumpPackages = new Map<BumpVersionType, Package[]>();
+  let selectedChoices: Choice[] = [];
 
-  const answer = await prompts(
-    [
-      {
+  async function askBumpVersion(type: BumpVersionType): Promise<Choice[]> {
+    const isFinishAsk = selectedChoices.length === choices.length;
+    if (!isFinishAsk) {
+      const { packages } = await prompts({
         type: 'multiselect',
-        name: 'major',
+        name: 'packages',
         instructions: false,
-        message: 'Select packages to major version bump',
-        choices
-      },
-      {
-        type: choices.length ? 'multiselect' : null,
-        name: 'minor',
-        instructions: false,
-        message: 'Select packages to minor version bump',
-        choices: (selectedPackages) => {
-          choices = filterChoices(choices, packagesToChoices(selectedPackages));
-          return choices;
-        }
-      },
-      {
-        type: choices.length ? 'multiselect' : null,
-        name: 'patch',
-        instructions: false,
-        message: 'Select packages to patch version bump',
-        choices: (selectedPackages) => {
-          choices = filterChoices(choices, packagesToChoices(selectedPackages));
-          return choices;
-        }
-      },
-      {
-        type: choices.length ? 'multiselect' : null,
-        name: 'beta',
-        instructions: false,
-        message: 'Select packages to beta version bump',
-        choices: (selectedPackages) => {
-          choices = filterChoices(choices, packagesToChoices(selectedPackages));
-          return choices;
-        }
-      }
-    ],
-    {
-      onCancel: () => {
-        throw new Error(red('✖') + ' Operation cancelled');
-      },
-    },
-  );
+        message: `Select packages to ${type} version bump`,
+        choices: filterChoices(choices, selectedChoices),
+      }, {
+        onCancel: () => {
+          throw new Error(red('✖') + ' Operation cancelled');
+        },
+      });
+      bumpPackages.set(type, packages);
+      return selectedChoices.concat(packagesToChoices(packages));
+    }
+    return selectedChoices;
+  }
 
-  console.log('answer', answer);
+  selectedChoices = await askBumpVersion('major');
+  selectedChoices = await askBumpVersion('minor');
+  selectedChoices = await askBumpVersion('patch');
+
+  await doBumpPackages(packageManager, bumpPackages);
+
 }
 
 main().catch((err) => {
