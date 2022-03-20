@@ -11,8 +11,8 @@
     "preinstall": "npx only-allow pnpm",
     "sugar": "pnpm build --filter vite-plugin-sugar && pnpm build --filter vite-plugin-sugar-usage",
     "commit": "git-cz",
-    "release": "ts-node scripts/release.ts",
-    "tag": "ts-node scripts/tag.ts",
+    "changelog": "ts-node scripts/changelog.ts",
+    "release-tag": "ts-node scripts/release-tag.ts",
     "changeset": "changeset"
   },
   "repository": {
