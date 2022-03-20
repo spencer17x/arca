@@ -54,6 +54,9 @@ jobs:
             const { packages } = await getPackages(process.cwd())
             const foundPackage = packages.find(pkg => context.ref.includes(pkg.packageJson.name))
             const prefixDir = foundPackage.dir.split('/packages/')[1]
+            console.log('foundPackage', foundPackage)
+            console.log('prefixDir', prefixDir)
+            console.log('context.ref', context.ref)
             return { ...foundPackage, prefixDir }
 
       - name: Create release
