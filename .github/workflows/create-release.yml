@@ -52,7 +52,7 @@ jobs:
           script: |
             const { getPackages } = require('@manypkg/get-packages')
             const { packages } = await getPackages(process.cwd())
-            const foundPackage = packages.find(pkg => context.ref.includes(pkg.packageJson.name))
+            const foundPackage = packages.find(pkg => context.ref.replace('refs/tags/', '').includes(pkg.packageJson.name))
             const prefixDir = foundPackage.dir.split('/packages/')[1]
             console.log('foundPackage', foundPackage)
             console.log('prefixDir', prefixDir)
