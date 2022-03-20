@@ -59,7 +59,7 @@ jobs:
 
       - name: Echo package info
         run: |
-          echo "Package: ${{ steps.found-package.packag eJson.name }}"
+          echo "Package: ${{ steps.found-package.packageJson.name }}"
 
 #      - name: Create release
 #        id: create-release
