@@ -49,15 +49,13 @@ jobs:
         uses: actions/github-script@v6
         id: found-package
         with:
+          result-encoding: string
           script: |
             const { getPackages } = require('@manypkg/get-packages')
             const { packages } = await getPackages(process.cwd())
             const foundPackage = packages.find(pkg => context.ref.replace('refs/tags/', '').includes(pkg.packageJson.name))
             const prefixDir = foundPackage.dir.split('/packages/')[1]
-            console.log('foundPackage', foundPackage)
-            console.log('prefixDir', prefixDir)
-            console.log('context.ref', context.ref)
-            return { ...foundPackage, prefixDir }
+            return prefixDir
 
       - name: Create release
         id: create-release
@@ -67,4 +65,4 @@ jobs:
         with:
           tag_name: ${{ github.ref }}
           body: |
-            Please refer to [CHANGELOG.md](https://github.com/Spencer17x/arca/blob/main/packages/${{ steps.found-package.prefixDir }}/CHANGELOG.md) for details.
+            Please refer to [CHANGELOG.md](https://github.com/Spencer17x/arca/blob/main/packages/${{ steps.found-package.outputs.result }}/CHANGELOG.md) for details.
