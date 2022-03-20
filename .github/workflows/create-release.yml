@@ -59,6 +59,8 @@ jobs:
             const { packages } = await getPackages(process.cwd())
             const foundPackage = packages.find(pkg => context.ref.includes(pkg.packageJson.name))
             console.log('foundPackage', foundPackage)
+            console.log('packages', packages)
+            console.log('context.ref', context.ref)
             return foundPackage
 
 #      - name: Create release
