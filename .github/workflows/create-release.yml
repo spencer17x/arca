@@ -58,11 +58,8 @@ jobs:
             const { getPackages } = require('@manypkg/get-packages')
             const { packages } = await getPackages(process.cwd())
             const foundPackage = packages.find(pkg => context.ref.includes(pkg.packageJson.name))
+            console.log('foundPackage', foundPackage)
             return foundPackage
-
-      - name: Echo package info
-        run: |
-          echo "Package: ${{ steps.found-package.packageJson.name }}"
 
 #      - name: Create release
 #        id: create-release
