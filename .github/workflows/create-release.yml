@@ -53,10 +53,8 @@ jobs:
             const { getPackages } = require('@manypkg/get-packages')
             const { packages } = await getPackages(process.cwd())
             const foundPackage = packages.find(pkg => context.ref.includes(pkg.packageJson.name))
-            console.log('foundPackage', foundPackage)
-            console.log('packages', packages)
-            console.log('context.ref', context.ref)
-            return foundPackage
+            const prefixDir = foundPackage.dir.split('/packages/')[1]
+            return { ...foundPackage, prefixDir }
 
 #      - name: Create release
 #        id: create-release
@@ -66,4 +64,4 @@ jobs:
 #        with:
 #          tag_name: ${{ github.ref }}
 #        body: |
-#          Please refer to [CHANGELOG.md](https://github.com/Spencer17x/arca/blob/main/packages/${{ steps.tag.outputs.pkgName }}/CHANGELOG.md) for details.
+#          Please refer to [CHANGELOG.md](https://github.com/Spencer17x/arca/blob/main/packages/${{ steps.tag.found-package.prefixDir }}/CHANGELOG.md) for details.
