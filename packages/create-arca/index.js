@@ -36,6 +36,7 @@ async function init() {
   const defaultProjectName = !targetDir ? 'a-project' : targetDir;
 
   let result = {};
+  
 
   try {
     result = await prompts(
