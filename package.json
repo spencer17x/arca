@@ -11,8 +11,7 @@
     "preinstall": "npx only-allow pnpm",
     "sugar": "pnpm build --filter vite-plugin-sugar && pnpm build --filter vite-plugin-sugar-usage",
     "commit": "git-cz",
-    "changelog": "ts-node scripts/changelog.ts",
-    "release-tag": "ts-node scripts/release-tag.ts",
+    "release": "ts-node scripts/release.ts",
     "changeset": "changeset"
   },
   "repository": {
@@ -55,7 +54,9 @@
     "husky": "^7.0.4",
     "kolorist": "^1.5.1",
     "lint-staged": "^12.1.1",
+    "picocolors": "^1.0.0",
     "prompts": "^2.4.2",
+    "semver": "^7.3.5",
     "standard-version": "^9.3.2",
     "ts-node": "^10.0.0",
     "yamljs": "^0.3.0"
