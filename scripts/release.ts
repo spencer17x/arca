@@ -65,7 +65,7 @@ async function main() {
   }
 
   step('\nUpdating package version...');
-  updateVersion(currentPkg.dir, targetVersion);
+  updateVersion(`${currentPkg.dir}/package.json`, targetVersion);
 
   step('\nGenerating changelog...');
   // https://github.com/conventional-changelog/conventional-changelog/blob/master/packages/conventional-changelog-cli/cli.js
