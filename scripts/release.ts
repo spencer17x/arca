@@ -96,7 +96,7 @@ async function main() {
     return;
   }
 
-  await pushToGithub(tag);
+  // await pushToGithub(tag);
 }
 
 main().catch((err) => {
