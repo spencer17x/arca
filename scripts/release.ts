@@ -81,7 +81,7 @@ async function main() {
     // '--skip-unstable'
   ];
   if (currentPkgName !== MAIN_PACKAGE) {
-    changelogArgs.push('--lerna-package', currentPkgName);
+    changelogArgs.push('-l', currentPkgName);
   }
   await run('npx', changelogArgs, { cwd: currentPkgDir });
 
@@ -96,7 +96,7 @@ async function main() {
     return;
   }
 
-  // await pushToGithub(tag);
+  await pushToGithub(tag);
 }
 
 main().catch((err) => {
