@@ -37,7 +37,6 @@ async function init() {
 
   let result = {};
 
-  
   try {
     result = await prompts(
       [
