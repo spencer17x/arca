@@ -81,7 +81,7 @@ async function main() {
     // '--skip-unstable'
   ];
   if (currentPkgName !== MAIN_PACKAGE) {
-    changelogArgs.push('-l');
+    changelogArgs.push('--lerna-package', currentPkgName);
   }
   await run('npx', changelogArgs, { cwd: currentPkgDir });
 
