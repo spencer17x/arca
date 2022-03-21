@@ -29,7 +29,6 @@ const renameFiles = {
   _gitignore: '.gitignore',
 };
 
-
 async function init() {
   let targetDir = argv._[0];
   let template = argv.template || argv.t;
