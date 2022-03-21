@@ -16,6 +16,7 @@ importers:
       husky: ^7.0.4
       kolorist: ^1.5.1
       lint-staged: ^12.1.1
+      minimist: ^1.2.5
       picocolors: ^1.0.0
       prompts: ^2.4.2
       semver: ^7.3.5
@@ -35,6 +36,7 @@ importers:
       husky: 7.0.4
       kolorist: 1.5.1
       lint-staged: 12.1.2
+      minimist: 1.2.5
       picocolors: 1.0.0
       prompts: 2.4.2
       semver: 7.3.5
