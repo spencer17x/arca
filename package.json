@@ -12,7 +12,8 @@
     "sugar": "pnpm build --filter vite-plugin-sugar && pnpm build --filter vite-plugin-sugar-usage",
     "commit": "git-cz",
     "release": "ts-node scripts/release.ts",
-    "changeset": "changeset"
+    "changeset": "changeset",
+    "ci-publish": "ts-node scripts/publishCI.ts"
   },
   "repository": {
     "type": "git",

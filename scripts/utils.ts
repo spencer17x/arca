@@ -14,7 +14,7 @@ export async function pushToGithub(tag: string) {
   } else {
     console.log(
       colors.green(
-        '\nPushed, publishing should starts shortly on CI.\nhttps://github.com/Spencer17x/arca/actions/workflows/create-release.yml'
+        '\nPushed, publishing should starts shortly on CI.\nhttps://github.com/Spencer17x/arca/actions/workflows/npm-publish.yml'
       )
     );
   }
