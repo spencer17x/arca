@@ -6,10 +6,11 @@ module.exports = {
   minMessageLength: 3,
   questions: ['type', 'scope', 'subject', 'body', 'breaking', 'issues', 'lerna'],
   scopes: [
-    '*',
+    '',
     'create-arca',
     'vite-plugin-sugar',
     'vite-plugin-sugar-usage',
+    'ar-changelog',
   ],
   types: {
     chore: {

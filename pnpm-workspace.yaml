@@ -2,3 +2,4 @@ packages:
   - 'packages/create-arca'
   - 'packages/vite-plugin/**'
   - 'packages/vite-plugin-usage/**'
+  - 'packages/scripts/**'
