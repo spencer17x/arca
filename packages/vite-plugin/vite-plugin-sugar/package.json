@@ -24,11 +24,10 @@
     "README.md"
   ],
   "scripts": {
-    "clean": "rimraf build",
-    "build:prod": "yarn clean && rollup -c rollup.config.ts --silent --environment NODE_ENV:prod",
-    "build:test": "yarn clean && rollup -c rollup.config.ts --silent --environment NODE_ENV:test",
-    "build:dev": "yarn clean && rollup -c rollup.config.ts --silent --environment NODE_ENV:dev",
-    "build": "yarn build:prod",
+    "build:prod": "rimraf build && rollup -c rollup.config.ts --silent --environment NODE_ENV:prod",
+    "build:test": "rimraf build && rollup -c rollup.config.ts --silent --environment NODE_ENV:test",
+    "build:dev": "rimraf build && rollup -c rollup.config.ts --silent --environment NODE_ENV:dev",
+    "build": "rimraf build && rollup -c rollup.config.ts --silent --environment NODE_ENV:prod",
     "test": "jest --passWithNoTests",
     "coverage": "jest --coverage",
     "test:watch": "jest --coverage --watch",
