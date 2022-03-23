@@ -7,6 +7,7 @@ importers:
       '@changesets/cli': ^2.21.1
       '@commitlint/config-conventional': ^16.2.1
       '@manypkg/get-packages': ^1.1.3
+      ar-changelog: workspace:^0.0.0
       commitizen: ^4.2.4
       commitlint: ^16.2.1
       conventional-changelog-cli: ^2.2.2
@@ -27,6 +28,7 @@ importers:
       '@changesets/cli': 2.21.1
       '@commitlint/config-conventional': 16.2.1
       '@manypkg/get-packages': 1.1.3
+      ar-changelog: link:packages/scripts/ar-changelog
       commitizen: 4.2.4
       commitlint: 16.2.1
       conventional-changelog-cli: 2.2.2
