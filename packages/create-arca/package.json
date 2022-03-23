@@ -10,6 +10,9 @@
   "bin": {
     "create-arca": "index.js"
   },
+  "scripts": {
+    "build": "echo \"Error: no build script specified\" && exit 1"
+  },
   "keywords": [],
   "author": "Spencer17x",
   "dependencies": {
