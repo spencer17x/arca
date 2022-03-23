@@ -9,7 +9,6 @@ module.exports = {
     '',
     'create-arca',
     'vite-plugin-sugar',
-    'vite-plugin-sugar-usage',
     'ar-changelog',
   ],
   types: {
