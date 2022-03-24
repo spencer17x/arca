@@ -17,7 +17,7 @@ async function main() {
 
   if (version.startsWith('v')) version = version.slice(1);
 
-  const { currentVersion, pkgDir } = getPackageInfo(pkgName);
+  const { currentVersion, pkgDir } = await getPackageInfo(pkgName);
   if (currentVersion !== version)
     throw new Error(
       `Package version from tag "${version}" mismatches with current version "${currentVersion}"`
