@@ -1,3 +1,12 @@
+## [1.1.3](https://github.com/Spencer17x/arca/compare/create-arca@1.1.2...create-arca@1.1.3) (2022-03-24)
+
+
+### Features
+
+* **create-arca:** build script ([4a0c3ea](https://github.com/Spencer17x/arca/commit/4a0c3ea35fda4dae6febfa4f9db1bf927204900e))
+
+
+
 ## [1.1.2](https://github.com/Spencer17x/arca/compare/create-arca@1.1.1...create-arca@1.1.2) (2022-03-23)
 
 
