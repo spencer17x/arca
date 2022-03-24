@@ -1,3 +1,12 @@
+## [1.0.4](https://github.com/Spencer17x/arca/compare/ar-changelog@1.0.3...ar-changelog@1.0.4) (2022-03-24)
+
+
+### Bug Fixes
+
+* **ar-changelog:** change get Package Info to get dynamically ([13b47c4](https://github.com/Spencer17x/arca/commit/13b47c424e307e356e58d5519c1cefca81690890))
+
+
+
 ## [1.0.3](https://github.com/Spencer17x/arca/compare/ar-changelog@1.0.2...ar-changelog@1.0.3) (2022-03-24)
 
 
