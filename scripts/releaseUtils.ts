@@ -1,17 +1,12 @@
 /**
  * https://github.com/vitejs/vite/blob/c43467ad65239a635d45e2f3596613e676890fb5/scripts/releaseUtils.ts
  */
-// @ts-ignore
 import colors from 'picocolors'
 import type { Options as ExecaOptions } from 'execa'
-// @ts-ignore
 import execa from 'execa'
 import { readFileSync, writeFileSync, existsSync, readdirSync } from 'fs'
-// @ts-ignore
 import path from 'path'
-// @ts-ignore
 import type { ReleaseType } from 'semver'
-// @ts-ignore
 import semver from 'semver'
 
 export const args = require('minimist')(process.argv.slice(2))
@@ -22,6 +17,15 @@ if (isDryRun) {
   console.log(colors.inverse(colors.yellow(' DRY RUN ')))
   console.log()
 }
+
+export const packages = [
+  'vite',
+  'create-vite',
+  'plugin-legacy',
+  'plugin-react',
+  'plugin-vue',
+  'plugin-vue-jsx'
+]
 
 export const versionIncrements: ReleaseType[] = [
   'patch',
