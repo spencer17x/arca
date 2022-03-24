@@ -42,7 +42,7 @@ export const versionIncrements: ReleaseType[] = [
 export async function getPackageInfo(pkgName: string) {
   const { packages } = await getPackages(process.cwd());
 
-  const pkgDir = packages.find(p => p.packageJson.name === pkgName).dir;
+  const pkgDir = packages.find(p => p.packageJson.name === pkgName)?.dir || '';
 
   if (!existsSync(pkgDir)) {
     throw new Error(`Package ${pkgName} not found`);

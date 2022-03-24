@@ -8,6 +8,8 @@ import { readFileSync, writeFileSync, existsSync, readdirSync } from 'fs'
 import path from 'path'
 import type { ReleaseType } from 'semver'
 import semver from 'semver'
+import { getPackages } from '@manypkg/get-packages';
+import process from 'process';
 
 export const args = require('minimist')(process.argv.slice(2))
 
@@ -37,8 +39,10 @@ export const versionIncrements: ReleaseType[] = [
   // 'prerelease'
 ]
 
-export function getPackageInfo(pkgName: string) {
-  const pkgDir = path.resolve(__dirname, '../packages/' + pkgName)
+export async function getPackageInfo(pkgName: string) {
+  const { packages } = await getPackages(process.cwd());
+
+  const pkgDir = packages.find(p => p.packageJson.name === pkgName)?.dir || '';
 
   if (!existsSync(pkgDir)) {
     throw new Error(`Package ${pkgName} not found`)
