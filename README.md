@@ -1,4 +1,4 @@
-# arca
+# Arca
 
 Some common tools and plugins
 
