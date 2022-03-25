@@ -5,6 +5,12 @@
   "module": "build/ar-changelog.esm.js",
   "typings": "build/types/ar-changelog.d.ts",
   "author": "Spencer17x <1253478653@qq.com>",
+  "keywords": [
+    "monorepo",
+    "changelog",
+    "changelog-generator",
+    "generation"
+  ],
   "bin": {
     "ar-changelog": "bin/index.js"
   },
