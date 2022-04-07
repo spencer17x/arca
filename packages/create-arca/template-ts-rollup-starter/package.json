@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "main": "build/--libraryname--.umd.js",
   "module": "build/--libraryname--.esm.js",
-  "typings": "build/types/--libraryname--.d.ts",
+  "typings": "build/types/index.d.ts",
   "author": "--username-- <--usermail-->",
   "repository": {
     "type": "git",
