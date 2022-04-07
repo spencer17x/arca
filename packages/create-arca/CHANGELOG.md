@@ -1,3 +1,12 @@
+## [1.1.8](https://github.com/Spencer17x/arca/compare/create-arca@1.1.7...create-arca@1.1.8) (2022-04-07)
+
+
+### Features
+
+* **create-arca:** modify d.ts path ([548b48e](https://github.com/Spencer17x/arca/commit/548b48e7083544c5ff40ea7676212df095d852cf))
+
+
+
 ## [1.1.7](https://github.com/Spencer17x/arca/compare/create-arca@1.1.6...create-arca@1.1.7) (2022-04-07)
 
 
