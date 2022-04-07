@@ -1,3 +1,12 @@
+## [1.1.7](https://github.com/Spencer17x/arca/compare/create-arca@1.1.6...create-arca@1.1.7) (2022-04-07)
+
+
+### Features
+
+* **create-arca:** remove template doc ([8295f4c](https://github.com/Spencer17x/arca/commit/8295f4c0bf7877885a55c0ab7ec78d311f723b10))
+
+
+
 ## [1.1.6](https://github.com/Spencer17x/arca/compare/create-arca@1.1.5...create-arca@1.1.6) (2022-04-07)
 
 
