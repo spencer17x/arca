@@ -16,10 +16,10 @@
     "build:prod": "rimraf build && rollup -c rollup.config.ts --silent --environment NODE_ENV:prod",
     "build:test": "rimraf build && rollup -c rollup.config.ts --silent --environment NODE_ENV:test",
     "build:dev": "rimraf build && rollup -c rollup.config.ts --silent --environment NODE_ENV:dev",
+    "build": "rimraf build && rollup -c rollup.config.ts --silent --environment NODE_ENV:prod",
     "test": "jest -c jest.config.ts",
     "coverage": "jest -c jest.config.ts --coverage",
     "test:watch": "jest -c jest.config.ts --coverage --watch",
-    "tsc": "tsc -init",
     "postinstall": "ts-node tools/init"
   },
   "license": "MIT",
