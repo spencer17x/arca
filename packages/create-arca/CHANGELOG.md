@@ -1,3 +1,12 @@
+## [1.1.6](https://github.com/Spencer17x/arca/compare/create-arca@1.1.5...create-arca@1.1.6) (2022-04-07)
+
+
+### Features
+
+* **create-arca:** remove delete log plugin, add build script ([6b1619c](https://github.com/Spencer17x/arca/commit/6b1619c3dd3ef85019d8c6aee742751563e7196d))
+
+
+
 ## [1.1.5](https://github.com/Spencer17x/arca/compare/create-arca@1.1.4...create-arca@1.1.5) (2022-03-24)
 
 
