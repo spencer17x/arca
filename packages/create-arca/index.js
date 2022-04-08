@@ -8,6 +8,7 @@ const {
   green,
   red,
   reset,
+  bold,
 } = require('kolorist');
 
 const cwd = process.cwd();
@@ -20,6 +21,10 @@ const templates = [
   {
     name: 'ts-rollup-starter',
     color: green,
+  },
+  {
+    name: 'react-components-rollup',
+    color: bold,
   },
 ];
 
