@@ -1,3 +1,14 @@
+## [1.1.16](https://github.com/Spencer17x/arca/compare/create-arca@1.1.12...create-arca@1.1.16) (2022-04-08)
+
+
+### Features
+
+* **create-arca:** test publish ([30e3d6c](https://github.com/Spencer17x/arca/commit/30e3d6ca600e8f61dcb13047f4b7cb88b231677b))
+* **create-arca:** test release ([c7ae759](https://github.com/Spencer17x/arca/commit/c7ae75955219073e0f78d62a5ee9647569fecb5e))
+* **create-arca:** test release version ([e1fb2a2](https://github.com/Spencer17x/arca/commit/e1fb2a2a53442c13086502a6a08fce407e85ce52))
+
+
+
 ## [1.1.12](https://github.com/Spencer17x/arca/compare/create-arca@1.1.10...create-arca@1.1.12) (2022-04-08)
 
 
