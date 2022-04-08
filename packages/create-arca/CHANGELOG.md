@@ -1,3 +1,12 @@
+## [1.1.12](https://github.com/Spencer17x/arca/compare/create-arca@1.1.10...create-arca@1.1.12) (2022-04-08)
+
+
+### Features
+
+* **create-arca:** test ci-publish ([2f86e60](https://github.com/Spencer17x/arca/commit/2f86e6027021b530ba1c3c031d091171d198f32e))
+
+
+
 ## [1.1.10](https://github.com/Spencer17x/arca/compare/create-arca@1.1.9...create-arca@1.1.10) (2022-04-07)
 
 
