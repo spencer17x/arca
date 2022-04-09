@@ -1,3 +1,12 @@
+## [1.2.9](https://github.com/Spencer17x/arca/compare/create-arca@1.2.7...create-arca@1.2.9) (2022-04-09)
+
+
+### Bug Fixes
+
+* **create-arca:** fix file is missing ([95fc682](https://github.com/Spencer17x/arca/commit/95fc68278a4145b0f4ceb995d847f0fa9f99a973)), closes [#1](https://github.com/Spencer17x/arca/issues/1)
+
+
+
 ## [1.2.8](https://github.com/Spencer17x/arca/compare/create-arca@1.2.7...create-arca@1.2.8) (2022-04-09)
 
 
