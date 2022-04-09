@@ -6,7 +6,10 @@ import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 import scss from 'rollup-plugin-scss';
 import * as fs from 'fs';
 
-const components = fs.readdirSync('src').filter(name => name !== 'index.ts');
+const externalForSrc = [
+  'index.ts',
+]
+const components = fs.readdirSync('src').filter(name => !externalForSrc.includes(name));
 
 const packageJson = require('./package.json');
 
@@ -44,6 +47,19 @@ const esmConfig = components.map(cmp => {
       })
     ])
   };
+}).concat({
+  input: 'src/index.ts',
+  output: {
+    file: 'es/index.js',
+    format: 'esm',
+    sourcemap: false,
+    exports: 'named',
+  },
+  plugins: plugins.concat([
+    scss({
+      output: 'es/index.css',
+    })
+  ])
 });
 
 /**
@@ -64,6 +80,19 @@ const cjsConfig = components.map(cmp => {
       })
     ])
   };
+}).concat({
+  input: 'src/index.ts',
+  output: {
+    file: 'lib/index.js',
+    format: 'cjs',
+    sourcemap: false,
+    exports: 'named',
+  },
+  plugins: plugins.concat([
+    scss({
+      output: 'lib/index.css',
+    })
+  ])
 });
 
 const config = [
