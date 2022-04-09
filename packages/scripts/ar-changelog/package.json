@@ -31,7 +31,8 @@
     "test": "jest -c jest.config.ts",
     "coverage": "jest -c jest.config.ts --coverage",
     "test:watch": "jest -c jest.config.ts --coverage --watch",
-    "tsc": "tsc -init"
+    "tsc": "tsc -init",
+    "prepublishOnly": "npm run build"
   },
   "devDependencies": {
     "@rollup/plugin-commonjs": "^19.0.0",

@@ -12,7 +12,7 @@ jobs:
   publish:
     # prevents this action from running on forks
     if: github.repository == 'Spencer17x/arca'
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     environment: Release
     steps:
       - name: Checkout
@@ -40,22 +40,6 @@ jobs:
           EOF
         env:
           NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
-
-      - name: Get pkgName for tag
-        id: tag
-        run: |
-          # matching v2.0.0 / v2.0.0-beta.8 etc
-          if [[ $GITHUB_REF_NAME =~ ^v.+ ]]; then
-            pkgName="arca"
-          else
-            # `%@*` truncates @ and version number from the right side.
-            # https://stackoverflow.com/questions/9532654/expression-after-last-specific-character
-            pkgName=${GITHUB_REF_NAME%@*}
-          fi
-          echo "::set-output name=pkgName::$pkgName"
-
-      - name: Build
-        run: pnpm --filter ${{ steps.tag.outputs.pkgName }} run build
 
       - name: Publish package
         run: pnpm run ci-publish -- ${{ github.ref_name }}

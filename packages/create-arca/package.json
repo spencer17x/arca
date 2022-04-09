@@ -10,9 +10,6 @@
   "bin": {
     "create-arca": "index.js"
   },
-  "scripts": {
-    "build": "echo \"Info: build sucessfully\""
-  },
   "keywords": [],
   "author": "Spencer17x",
   "dependencies": {

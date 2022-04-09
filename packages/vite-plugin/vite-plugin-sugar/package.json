@@ -32,7 +32,8 @@
     "coverage": "jest --coverage",
     "test:watch": "jest --coverage --watch",
     "tsc": "tsc -init",
-    "deploy-docs": "ts-node tools/gh-pages-publish"
+    "deploy-docs": "ts-node tools/gh-pages-publish",
+    "prepublishOnly": "npm run build"
   },
   "license": "MIT",
   "devDependencies": {
