@@ -1,3 +1,12 @@
+# [1.2.0](https://github.com/Spencer17x/arca/compare/create-arca@1.1.20...create-arca@1.2.0) (2022-04-09)
+
+
+### Features
+
+* **create-arca:** add react-components-rollup template ([1e8ff29](https://github.com/Spencer17x/arca/commit/1e8ff29d9b1aa7eeb44047a4664c93609e89245b)), closes [#3](https://github.com/Spencer17x/arca/issues/3)
+
+
+
 ## [1.1.20](https://github.com/Spencer17x/arca/compare/create-arca@1.1.19...create-arca@1.1.20) (2022-04-08)
 
 
