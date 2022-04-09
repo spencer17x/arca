@@ -1,3 +1,7 @@
+## [1.2.4](https://github.com/Spencer17x/arca/compare/create-arca@1.2.3...create-arca@1.2.4) (2022-04-09)
+
+
+
 ## [1.2.3](https://github.com/Spencer17x/arca/compare/create-arca@1.2.2...create-arca@1.2.3) (2022-04-09)
 
 
