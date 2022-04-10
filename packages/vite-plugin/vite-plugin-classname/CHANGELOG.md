@@ -1,3 +1,12 @@
+## [0.0.3](https://github.com/Spencer17x/arca/compare/vite-plugin-classname@0.0.2...vite-plugin-classname@0.0.3) (2022-04-10)
+
+
+### Bug Fixes
+
+* **vite-plugin-classname:** add ts-ignore to playground ([69d7630](https://github.com/Spencer17x/arca/commit/69d76307c5da5ddc1e14ec34abb8996cf117078d))
+
+
+
 ## [0.0.2](https://github.com/Spencer17x/arca/compare/vite-plugin-classname@0.0.1...vite-plugin-classname@0.0.2) (2022-04-10)
 
 
