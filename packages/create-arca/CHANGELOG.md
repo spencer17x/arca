@@ -1,3 +1,15 @@
+## [1.2.11](https://github.com/Spencer17x/arca/compare/create-arca@1.2.10...create-arca@1.2.11) (2022-04-10)
+
+
+### Features
+
+* **create-arca:** template-esbuild-starter ([09c4bbe](https://github.com/Spencer17x/arca/commit/09c4bbec293de6507943773e808162554e28e280))
+* **create-arca:** template-esbuild-starter ([bdf0645](https://github.com/Spencer17x/arca/commit/bdf0645184a7dccadfd49cb0023cc05558a5a353)), closes [#7](https://github.com/Spencer17x/arca/issues/7)
+* **create-arca:** template-react-components-rollup ([ef2694a](https://github.com/Spencer17x/arca/commit/ef2694ae20c6621e21c7bd88c3c0617eb10200d5)), closes [#6](https://github.com/Spencer17x/arca/issues/6)
+* **create-arca:** template-ts-rollup-starter ([d4f6b49](https://github.com/Spencer17x/arca/commit/d4f6b49b1636820862218a24535f747b1afb8c6d))
+
+
+
 ## [1.2.10](https://github.com/Spencer17x/arca/compare/create-arca@1.2.9...create-arca@1.2.10) (2022-04-09)
 
 
