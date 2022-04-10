@@ -1,6 +1,6 @@
 {
   "name": "vite-plugin-classname",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "main": "build/vite-plugin-classname.umd.js",
   "module": "build/vite-plugin-classname.esm.js",
   "typings": "build/types/index.d.ts",
