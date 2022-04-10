@@ -1,3 +1,7 @@
+const { getPackagesSync } = require('@manypkg/get-packages');
+
+const packages = getPackagesSync(process.cwd()).packages.map(pkg => pkg.packageJson.name);
+
 module.exports = {
   disableEmoji: true,
   format: '{type}{scope}: {emoji}{subject}',
@@ -5,12 +9,7 @@ module.exports = {
   maxMessageLength: 64,
   minMessageLength: 3,
   questions: ['type', 'scope', 'subject', 'body', 'breaking', 'issues', 'lerna'],
-  scopes: [
-    '',
-    'create-arca',
-    'vite-plugin-sugar',
-    'ar-changelog',
-  ],
+  scopes: packages.concat(''),
   types: {
     chore: {
       description: 'Build process or auxiliary tool changes',
