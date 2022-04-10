@@ -1,3 +1,12 @@
+## [0.0.2](https://github.com/Spencer17x/arca/compare/vite-plugin-classname@0.0.1...vite-plugin-classname@0.0.2) (2022-04-10)
+
+
+### Features
+
+* **vite-plugin-classname:** modify types ([fef6b88](https://github.com/Spencer17x/arca/commit/fef6b88de0b3efd823ce5e4c7761b30d6e8a0de7))
+
+
+
 ## 0.0.1 (2022-04-10)
 
 
