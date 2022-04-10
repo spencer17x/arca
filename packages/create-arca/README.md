@@ -2,8 +2,9 @@
 
 You can use the following templates to build your library:
 
-* esbuild-started
+* esbuild-starter
 * ts-rollup-starter
+* react-components-rollup
 
 # Usage
 
