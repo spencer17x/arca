@@ -1,6 +1,8 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
-import { VitePluginClassName } from 'vite-plugin-classname';
+
+// @ts-ignore
+import { VitePluginClassName } from '../src';
 
 // https://vitejs.dev/config/
 export default defineConfig({
