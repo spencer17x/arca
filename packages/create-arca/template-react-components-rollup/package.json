@@ -7,8 +7,10 @@
   "types": "dist/types/index.d.ts",
   "scripts": {
     "clean": "rimraf dist es lib",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npm run clean && rollup -c rollup.config.ts"
+    "build": "npm run clean && rollup -c rollup.config.ts",
+    "test": "jest -c jest.config.ts",
+    "coverage": "jest -c jest.config.ts --coverage",
+    "test:watch": "jest -c jest.config.ts --coverage --watch"
   },
   "files": [
     "dist",
