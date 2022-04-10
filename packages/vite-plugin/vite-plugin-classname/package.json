@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "main": "build/vite-plugin-classname.umd.js",
   "module": "build/vite-plugin-classname.esm.js",
-  "typings": "build/types/index.d.ts",
+  "types": "build/types/index.d.ts",
   "author": "Spencer17x <1253478653@qq.com>",
   "repository": {
     "type": "git",

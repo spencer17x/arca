@@ -17,6 +17,7 @@
     "@vitejs/plugin-react": "^1.0.7",
     "sass": "^1.50.0",
     "typescript": "^4.5.4",
-    "vite": "^2.9.0"
+    "vite": "^2.9.0",
+    "vite-plugin-classname": "workspace:^0.0.1"
   }
 }
