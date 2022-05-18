@@ -20,6 +20,7 @@ export function VitePluginClassName(options: Options): PluginOption {
         };
       }
       if (id.endsWith('.tsx')) {
+        console.log('code', code);
         return {
           code: transformTSX(prefixClassName, code)
         };

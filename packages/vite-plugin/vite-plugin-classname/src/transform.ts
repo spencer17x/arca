@@ -21,7 +21,7 @@ export const transformCSS = (prefixClassName: string, code: string): string => {
  * @param code
  */
 export const transformTSX = (prefixClassName: string, code: string) => {
-  const classNameRegex = /className:\s"(.*)"/g;
+  const classNameRegex = /className:\s["'`](.*)["'`]/g;
   return code.replace(classNameRegex, (match, className) => {
     return `className: "${prefixClassName}-${className}"`;
   });
