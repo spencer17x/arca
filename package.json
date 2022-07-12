@@ -27,31 +27,11 @@
     "url": "https://github.com/Spencer17x/arca/issues"
   },
   "homepage": "https://github.com/Spencer17x/arca#readme",
-  "gitHooks": {
-    "pre-commit": "lint-staged --concurrent false",
-    "commit-msg": "node scripts/verifyCommit.cjs"
-  },
-  "lint-staged": {
-    "*": [
-      "prettier --write --ignore-unknown"
-    ],
-    "packages/*/{src,types}/**/*.ts": [
-      "eslint --ext .ts"
-    ],
-    "packages/**/*.d.ts": [
-      "eslint --ext .ts"
-    ]
-  },
   "packageManager": "pnpm@6.23.1",
   "devDependencies": {
-    "@commitlint/config-conventional": "^16.2.1",
     "@manypkg/get-packages": "^1.1.3",
     "@types/semver": "^7.3.9",
     "ar-changelog": "workspace:^1.0.2",
-    "commitizen": "^4.2.4",
-    "commitlint": "^16.2.1",
-    "conventional-changelog-cli": "^2.2.2",
-    "cz-conventional-changelog": "^3.3.0",
     "execa": "^5.1.1",
     "git-cz": "^4.8.0",
     "husky": "^7.0.4",
@@ -61,13 +41,6 @@
     "picocolors": "^1.0.0",
     "prompts": "^2.4.2",
     "semver": "^7.3.5",
-    "standard-version": "^9.3.2",
-    "ts-node": "^10.0.0",
-    "yamljs": "^0.3.0"
-  },
-  "config": {
-    "commitizen": {
-      "path": "git-cz"
-    }
+    "ts-node": "^10.0.0"
   }
 }
