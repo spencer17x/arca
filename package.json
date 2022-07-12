@@ -14,7 +14,7 @@
     "release": "ts-node scripts/release.ts",
     "changeset": "changeset",
     "ci-publish": "ts-node scripts/publishCI.ts",
-    "ar-changelog": "ar-changelog"
+    "changelog": "ar-changelog"
   },
   "repository": {
     "type": "git",
