@@ -1,6 +1,6 @@
 {
   "name": "ar-changelog",
-  "version": "1.0.14",
+  "version": "1.0.15",
   "main": "build/ar-changelog.cjs.js",
   "module": "build/ar-changelog.esm.js",
   "typings": "build/types/ar-changelog.d.ts",
@@ -61,6 +61,7 @@
     "typescript": "^4.3.2"
   },
   "dependencies": {
+    "conventional-changelog": "^3.1.25",
     "conventional-changelog-cli": "^2.2.2"
   }
 }
