@@ -1,3 +1,3 @@
 module.exports = {
-  autoPushToGithub: false,
+  autoPushToGithub: true,
 }
