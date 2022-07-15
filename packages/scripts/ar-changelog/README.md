@@ -7,10 +7,34 @@ Automate the workflow for generating Monorepo's changelog, which will ask you so
 $ pnpm add ar-changelog -D
 ```
 
+if you don't install conventional-changelog-cli, you can install it by:
+
+```shell
+$ pnpm add conventional-changelog-cli -D
+```
+
 ## Usage
 
-* add ar-changelog script to your package.json scripts
-* run `pnpm run ar-changelog`
+### commands
+
+#### release
+
+**Feature**:
+
+* Generate a changelog based on commits.
+* Create a tag with package.
+
+```shell
+$ ar-changelog release
+```
+
+#### publish
+
+It is mainly responsible for publishing package to NPM
+
+```shell
+$ ar-changelog publish
+```
 
 ## Custom config
 
