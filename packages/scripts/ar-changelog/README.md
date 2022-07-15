@@ -22,7 +22,9 @@ $ pnpm add conventional-changelog-cli -D
 **Feature**:
 
 * Generate a changelog based on commits.
-* Create a tag with package.
+* Create the corresponding version of the tag for the corresponding package.
+
+It will ask some questions and then create a version and Changelog based on your answers.
 
 ```shell
 $ ar-changelog release
