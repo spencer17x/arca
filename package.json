@@ -10,10 +10,11 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "preinstall": "npx only-allow pnpm",
     "sugar": "pnpm build --filter vite-plugin-sugar && pnpm build --filter vite-plugin-sugar-usage",
+    "build:ar-changelog": "pnpm --filter ar-changelog run build",
     "cz": "git-cz",
     "changeset": "changeset",
-    "ci-publish": "ar-changelog publish",
-    "changelog": "ar-changelog release"
+    "ci-publish": "pnpm run build:ar-changelog && ar-changelog publish",
+    "changelog": "pnpm run build:ar-changelog && ar-changelog release"
   },
   "repository": {
     "type": "git",
