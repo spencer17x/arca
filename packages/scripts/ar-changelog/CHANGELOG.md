@@ -1,3 +1,12 @@
+## [2.1.5](https://github.com/Spencer17x/arca/compare/ar-changelog@2.1.4...ar-changelog@2.1.5) (2022-07-15)
+
+
+### Bug Fixes
+
+* **ar-changelog:** 修复publish失败 ([d57d529](https://github.com/Spencer17x/arca/commit/d57d529933f7bc567431140489aa3f5bf543d5e1))
+
+
+
 ## [2.1.4](https://github.com/Spencer17x/arca/compare/ar-changelog@2.1.3...ar-changelog@2.1.4) (2022-07-15)
 
 
