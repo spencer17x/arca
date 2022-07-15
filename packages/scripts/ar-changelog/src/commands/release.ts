@@ -4,12 +4,20 @@ import prompts from 'prompts';
 import colors from 'picocolors';
 import semver from 'semver';
 
-import { getVersionChoices, logRecentCommits, pushToGithub, run, runIfNotDry, step, updateVersion } from './utils';
-import { getConfig } from './getConfig';
+import {
+  getConfig,
+  getVersionChoices,
+  logRecentCommits,
+  pushToGithub,
+  run,
+  runIfNotDry,
+  step,
+  updateVersion
+} from '../utils';
 
 const { mainPackage, autoPushToGithub } = getConfig();
 
-async function main() {
+export async function release() {
   const { packages } = await getPackages(process.cwd());
 
   const answerPkg: { pkg: Package } = await prompts<'pkg'>({
@@ -101,8 +109,3 @@ async function main() {
     await pushToGithub(tag);
   }
 }
-
-main().catch((err) => {
-  console.error(err);
-  process.exit(1);
-});

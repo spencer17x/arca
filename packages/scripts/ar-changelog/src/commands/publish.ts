@@ -1,9 +1,8 @@
-import { args, getPackageInfo, publishPackage, step } from './releaseUtils';
-import { getConfig } from './getConfig';
+import { args, getPackageInfo, publishPackage, step, getConfig } from '../utils';
 
 const MAIN_PACKAGE = getConfig().mainPackage;
 
-async function main() {
+export async function npmPublish() {
   const tag = args._[0];
 
   if (!tag) {
@@ -27,8 +26,3 @@ async function main() {
   step('Publishing package...');
   await publishPackage(pkgDir, version.includes('beta') ? 'beta' : undefined);
 }
-
-main().catch((err) => {
-  console.error(err);
-  process.exit(1);
-});
