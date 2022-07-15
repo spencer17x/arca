@@ -1,3 +1,13 @@
+## [2.1.2](https://github.com/Spencer17x/arca/compare/ar-changelog@1.0.18...ar-changelog@2.1.2) (2022-07-15)
+
+
+### Features
+
+* **ar-changelog:** docs update ([60a3d75](https://github.com/Spencer17x/arca/commit/60a3d7500835781218dcc33cde6053af58624dec))
+* **ar-changelog:** use release and publish command ([e1556bf](https://github.com/Spencer17x/arca/commit/e1556bf7cf7c8f1c1c6f05743efca265a7a626c5))
+
+
+
 ## [2.1.1](https://github.com/Spencer17x/arca/compare/ar-changelog@2.1.0...ar-changelog@2.1.1) (2022-07-15)
 
 
