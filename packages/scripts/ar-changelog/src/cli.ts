@@ -18,9 +18,10 @@ program
   });
 
 program.command('publish')
+  .argument('<tag>', 'The tag to publish to')
   .description('Publish a package to npm')
-  .action(() => {
-    npmPublish().catch((err) => {
+  .action((tag) => {
+    npmPublish(tag).catch((err) => {
       console.error(err);
       process.exit(1);
     });

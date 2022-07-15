@@ -2,8 +2,8 @@ import { args, getPackageInfo, publishPackage, step, getConfig } from '../utils'
 
 const MAIN_PACKAGE = getConfig().mainPackage;
 
-export async function npmPublish() {
-  const tag = args._[0];
+export async function npmPublish(tag: string) {
+  step(`Publishing tag: ${tag}`);
 
   if (!tag) {
     throw new Error('No tag specified');
