@@ -1,3 +1,12 @@
+# [2.1.0](https://github.com/Spencer17x/arca/compare/ar-changelog@1.0.18...ar-changelog@2.1.0) (2022-07-15)
+
+
+### Features
+
+* **ar-changelog:** 使用release和publish command来执行 ([d8a1b64](https://github.com/Spencer17x/arca/commit/d8a1b646dd16adae1dda7353ecaa33c366148e19))
+
+
+
 ## [1.0.18](https://github.com/Spencer17x/arca/compare/ar-changelog@1.0.16...ar-changelog@1.0.18) (2022-07-12)
 
 
