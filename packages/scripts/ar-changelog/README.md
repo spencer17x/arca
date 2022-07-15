@@ -33,7 +33,7 @@ $ ar-changelog release
 It is mainly responsible for publishing package to NPM
 
 ```shell
-$ ar-changelog publish
+$ ar-changelog publish <packageName>@tag
 ```
 
 ## Custom config
