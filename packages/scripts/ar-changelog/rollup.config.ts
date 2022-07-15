@@ -4,7 +4,6 @@ import json from '@rollup/plugin-json';
 import commonjs from '@rollup/plugin-commonjs';
 import { uglify } from 'rollup-plugin-uglify';
 import replace from '@rollup/plugin-replace';
-import { terser } from 'rollup-plugin-terser';
 
 const pkg = require('./package.json');
 
@@ -21,7 +20,7 @@ const outputName = 'ArChangelog'
 console.log(`Building ${libraryName} in environment: ${buildEnvironment}`);
 
 export default {
-  input: 'src/index.ts',
+  input: 'src/cli.ts',
   output: [
     {
       file: pkg.main,
@@ -59,11 +58,6 @@ export default {
     // which external modules to include in the bundle
     // https://github.com/rollup/rollup-plugin-node-resolve#usage
     nodeResolve(),
-    uglify(),
-    isProd && terser({
-      compress: {
-        pure_funcs: ['console.log'] // remove console.log
-      }
-    })
+    uglify()
   ]
 };

@@ -2,7 +2,7 @@ import path from 'path';
 import * as fs from 'fs';
 import signale from 'signale';
 
-import { ArChangelogConfig } from './defaults';
+import { ArChangelogConfig } from '../types';
 
 const configFiles = [
   'ar-changelog.config.js',
