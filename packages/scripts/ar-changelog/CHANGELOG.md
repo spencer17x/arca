@@ -1,3 +1,12 @@
+## [2.1.1](https://github.com/Spencer17x/arca/compare/ar-changelog@2.1.0...ar-changelog@2.1.1) (2022-07-15)
+
+
+### Features
+
+* **ar-changelog:** 使用文档更新 ([8f4c66b](https://github.com/Spencer17x/arca/commit/8f4c66bde2196b0ca1c238ce8bc73abae0d98f6c))
+
+
+
 # [2.1.0](https://github.com/Spencer17x/arca/compare/ar-changelog@1.0.18...ar-changelog@2.1.0) (2022-07-15)
 
 
