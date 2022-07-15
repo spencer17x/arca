@@ -1,3 +1,7 @@
+## [2.1.3](https://github.com/Spencer17x/arca/compare/ar-changelog@2.1.2...ar-changelog@2.1.3) (2022-07-15)
+
+
+
 ## [2.1.2](https://github.com/Spencer17x/arca/compare/ar-changelog@1.0.18...ar-changelog@2.1.2) (2022-07-15)
 
 

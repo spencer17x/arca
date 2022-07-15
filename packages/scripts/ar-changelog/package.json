@@ -1,6 +1,6 @@
 {
   "name": "ar-changelog",
-  "version": "2.1.2",
+  "version": "2.1.3",
   "main": "build/ar-changelog.cjs.js",
   "module": "build/ar-changelog.esm.js",
   "typings": "build/types/ar-changelog.d.ts",
