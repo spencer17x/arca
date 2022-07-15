@@ -6,7 +6,7 @@ importers:
     specifiers:
       '@manypkg/get-packages': ^1.1.3
       '@types/semver': ^7.3.9
-      ar-changelog: workspace:^2.1.0
+      ar-changelog: ^2.1.0
       conventional-changelog-cli: ^2.2.2
       execa: ^5.1.1
       git-cz: ^4.8.0
