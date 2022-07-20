@@ -1,7 +1,6 @@
 {
-  "name": "template-react-components-rollup",
+  "name": "--libraryname--",
   "version": "0.0.0",
-  "description": "",
   "main": "dist/lib/index.js",
   "module": "dist/es/index.js",
   "types": "dist/types/index.d.ts",
@@ -10,7 +9,8 @@
     "build": "npm run clean && rollup -c rollup.config.ts",
     "test": "jest -c jest.config.ts",
     "coverage": "jest -c jest.config.ts --coverage",
-    "test:watch": "jest -c jest.config.ts --coverage --watch"
+    "test:watch": "jest -c jest.config.ts --coverage --watch",
+    "postinstall": "ts-node tools/init"
   },
   "files": [
     "dist",
@@ -36,7 +36,8 @@
     "rollup-plugin-terser": "^7.0.2",
     "rollup-plugin-typescript2": "^0.30.0",
     "sass": "^1.50.0",
-    "typescript": "^4.3.2"
+    "typescript": "^4.3.2",
+    "ts-node": "^10.0.0"
   },
   "peerDependencies": {
     "react": "^18.0.0",

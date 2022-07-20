@@ -15,7 +15,7 @@ const cwd = process.cwd();
 
 const templates = [
   {
-    name: 'esbuild-started',
+    name: 'esbuild-starter',
     color: yellow,
   },
   {
@@ -23,7 +23,7 @@ const templates = [
     color: green,
   },
   {
-    name: 'react-components-rollup',
+    name: 'react-components-starter',
     color: bold,
   },
 ];
