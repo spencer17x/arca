@@ -1,3 +1,17 @@
+## [1.2.18](https://github.com/Spencer17x/arca/compare/create-arca@1.2.17...create-arca@1.2.18) (2022-07-20)
+
+
+### Bug Fixes
+
+* **create-arca:** dir change: test => tests ([818bc6c](https://github.com/Spencer17x/arca/commit/818bc6c4cfe920c238a654df59e3ba1c41b42be0))
+
+
+### Features
+
+* **create-arca:** add tsup-vitest template ([6f3c668](https://github.com/Spencer17x/arca/commit/6f3c6687718a8db7c62fd5241f866ebed0de3906))
+
+
+
 ## [1.2.17](https://github.com/Spencer17x/arca/compare/create-arca@1.2.16...create-arca@1.2.17) (2022-07-20)
 
 
