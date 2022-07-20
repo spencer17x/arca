@@ -41,7 +41,11 @@
     "prompt": "^1.1.0",
     "shelljs": "^0.8.4",
     "replace-in-file": "^6.2.0",
-    "colors": "^1.4.0"
+    "colors": "^1.4.0",
+    "@jest/types": "^27.0.0",
+    "@types/jest": "^27.0.0",
+    "jest": "^27.0.0",
+    "ts-jest": "^27.0.0"
   },
   "peerDependencies": {
     "react": "^18.0.0",
