@@ -5,10 +5,8 @@ const argv = require('minimist')(process.argv.slice(2), { string: ['_'] });
 const prompts = require('prompts');
 const {
   yellow,
-  green,
   red,
   reset,
-  bold,
 } = require('kolorist');
 
 const cwd = process.cwd();
@@ -20,11 +18,15 @@ const templates = [
   },
   {
     name: 'ts-rollup-starter',
-    color: green,
+    color: yellow,
   },
   {
     name: 'react-components-starter',
-    color: bold,
+    color: yellow,
+  },
+  {
+    name: 'tsup-vitest-starter',
+    color: yellow,
   },
 ];
 
