@@ -10,7 +10,7 @@
     "package.json"
   ],
   "scripts": {
-    "test": "vitest --config vitest.config.ts",
+    "test": "vitest --config vitest.config.ts --run",
     "build": "rimraf dist && tsup --config tsup.config.ts"
   },
   "keywords": [],
