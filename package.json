@@ -14,7 +14,7 @@
     "cz": "git-cz",
     "changeset": "changeset",
     "ci-publish": "pnpm run build:ar-changelog && ar-changelog publish",
-    "changelog": "pnpm run build:ar-changelog && ar-changelog release"
+    "release": "pnpm run build:ar-changelog && ar-changelog release"
   },
   "repository": {
     "type": "git",
