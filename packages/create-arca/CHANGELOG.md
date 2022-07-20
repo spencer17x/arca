@@ -1,3 +1,12 @@
+## [1.2.16](https://github.com/Spencer17x/arca/compare/create-arca@1.2.15...create-arca@1.2.16) (2022-07-20)
+
+
+### Bug Fixes
+
+* **create-arca:** fix template-esbuild-starter ([f451090](https://github.com/Spencer17x/arca/commit/f4510901b2800f8b6b358a2f6497ed05fc7a338a))
+
+
+
 ## [1.2.15](https://github.com/Spencer17x/arca/compare/create-arca@1.2.14...create-arca@1.2.15) (2022-07-20)
 
 
