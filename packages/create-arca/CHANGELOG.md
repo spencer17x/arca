@@ -1,3 +1,12 @@
+## [1.2.19](https://github.com/Spencer17x/arca/compare/create-arca@1.2.18...create-arca@1.2.19) (2022-07-20)
+
+
+### Features
+
+* **create-arca:** tsup-vitest use --run ([935e652](https://github.com/Spencer17x/arca/commit/935e652c58ebc977bebf932400b21efb6da1011c))
+
+
+
 ## [1.2.18](https://github.com/Spencer17x/arca/compare/create-arca@1.2.17...create-arca@1.2.18) (2022-07-20)
 
 
