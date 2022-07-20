@@ -1,3 +1,12 @@
+## [1.2.15](https://github.com/Spencer17x/arca/compare/create-arca@1.2.14...create-arca@1.2.15) (2022-07-20)
+
+
+### Features
+
+* **create-arca:** update template ([9491481](https://github.com/Spencer17x/arca/commit/9491481b8355e5aba3fffed52db9cc71eef8cb38))
+
+
+
 ## [1.2.14](https://github.com/Spencer17x/arca/compare/create-arca@1.2.12...create-arca@1.2.14) (2022-07-12)
 
 
