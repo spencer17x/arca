@@ -4,7 +4,7 @@ You can use the following templates to build your library:
 
 * esbuild-starter
 * ts-rollup-starter
-* react-components-rollup
+* react-components-starter
 
 # Usage
 
