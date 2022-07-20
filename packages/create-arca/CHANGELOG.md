@@ -1,3 +1,12 @@
+## [1.2.20](https://github.com/Spencer17x/arca/compare/create-arca@1.2.19...create-arca@1.2.20) (2022-07-20)
+
+
+### Bug Fixes
+
+* **create-arca:** fix jest version ([6aa1ecc](https://github.com/Spencer17x/arca/commit/6aa1ecc5b33a8df20ff6bfe98265fdfe02ec7cb1))
+
+
+
 ## [1.2.19](https://github.com/Spencer17x/arca/compare/create-arca@1.2.18...create-arca@1.2.19) (2022-07-20)
 
 
