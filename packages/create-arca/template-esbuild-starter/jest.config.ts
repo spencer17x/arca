@@ -15,7 +15,7 @@ export default async (): Promise<Config.InitialOptions> => {
     ],
     coveragePathIgnorePatterns: [
       '/node_modules/',
-      '/test/'
+      '/tests/'
     ],
     coverageThreshold: {
       global: {
