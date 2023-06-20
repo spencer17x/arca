@@ -28,10 +28,24 @@ jobs:
         with:
           node-version: 16.x
           registry-url: https://registry.npmjs.org/
-          cache: "pnpm"
 
       - name: Install deps
         run: pnpm install
+
+      - name: Get package
+        uses: actions/github-script@v6
+        id: found-package
+        with:
+          result-encoding: string
+          script: |
+            const { getPackages } = require('@manypkg/get-packages')
+            const { packages } = await getPackages(process.cwd())
+            const foundPackage = packages.find(pkg => context.ref.replace('refs/tags/', '').includes(pkg.packageJson.name))
+            const prefixDir = foundPackage.dir.split('/packages/')[1]
+            return prefixDir 
+
+      - name: Build package
+        run: pnpm -F ${{ steps.found-package.outputs.result }} run build
 
       - name: Creating .npmrc
         run: |
