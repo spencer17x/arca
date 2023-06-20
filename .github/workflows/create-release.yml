@@ -56,9 +56,10 @@ jobs:
           result-encoding: string
           script: |
             const { getPackages } = require('@manypkg/get-packages')
-            const { packages } = await getPackages(process.cwd())
-            const foundPackage = packages.find(pkg => context.ref.replace('refs/tags/', '').includes(pkg.packageJson.name))
-            const prefixDir = foundPackage.dir.split('/packages/')[1]
+            const repoPath = process.cwd()
+            const { packages } = await getPackages(repoPath)
+            const curPkg = packages.find(pkg => context.ref.includes(pkg.packageJson.name))
+            const prefixDir = curPkg.dir.replace(repoPath + '/', '')
             return prefixDir
 
       - name: Create release
@@ -69,4 +70,4 @@ jobs:
         with:
           tag_name: ${{ github.ref }}
           body: |
-            Please refer to [CHANGELOG.md](https://github.com/Spencer17x/arca/blob/main/packages/${{ steps.found-package.outputs.result }}/CHANGELOG.md) for details.
+            Please refer to [CHANGELOG.md](https://github.com/Spencer17x/arca/blob/main/${{ steps.found-package.outputs.result }}/CHANGELOG.md) for details.

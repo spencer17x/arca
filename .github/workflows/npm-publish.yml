@@ -34,18 +34,18 @@ jobs:
 
       - name: Get package
         uses: actions/github-script@v6
-        id: found-package
+        id: pkgName
         with:
           result-encoding: string
           script: |
             const { getPackages } = require('@manypkg/get-packages')
-            const { packages } = await getPackages(process.cwd())
-            const foundPackage = packages.find(pkg => context.ref.replace('refs/tags/', '').includes(pkg.packageJson.name))
-            const prefixDir = foundPackage.dir.split('/packages/')[1]
-            return prefixDir 
+            const repoPath = process.cwd()
+            const { packages } = await getPackages(repoPath)
+            const curPkg = packages.find(pkg => context.ref.includes(pkg.packageJson.name))
+            return curPkg.packageJson.name
 
       - name: Build package
-        run: pnpm -F ${{ steps.found-package.outputs.result }} run build
+        run: pnpm -F ${{ steps.pkgName.outputs.result }} run build
 
       - name: Creating .npmrc
         run: |
