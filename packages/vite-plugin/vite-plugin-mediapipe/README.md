@@ -3,7 +3,7 @@
 ## Quick Start
 
 ```bash
-pnpm add vite-plugin-mediapipe
+pnpm add vite-plugin-mediapipe -D
 ```
 
 ```ts
