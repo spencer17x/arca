@@ -1,3 +1,7 @@
+## [0.0.5](https://github.com/Spencer17x/arca/compare/vite-plugin-mediapipe@0.0.4...vite-plugin-mediapipe@0.0.5) (2023-06-20)
+
+
+
 ## [0.0.4](https://github.com/Spencer17x/arca/compare/vite-plugin-mediapipe@0.0.4...vite-plugin-mediapipe@0.0.4) (2023-06-20)
 
 
