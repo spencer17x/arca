@@ -5,7 +5,7 @@ import fs from 'fs';
 /**
  * issue: https://github.com/google/mediapipe/issues/4120
  */
-export const mediapipe = (): PluginOption => {
+export const mediapipe = (config?: Record<string, string[]>): PluginOption => {
 	return {
 		name: 'mediapipe',
 		load(id) {
@@ -44,7 +44,8 @@ export const mediapipe = (): PluginOption => {
 					'POSE_LANDMARKS_NEUTRAL',
 					'matrixDataToMatrix',
 					'VERSION',
-				]
+				],
+				...config
 			};
 
 			const fileName = path.basename(id);
