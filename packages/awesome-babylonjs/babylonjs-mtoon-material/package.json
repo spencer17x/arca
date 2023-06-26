@@ -3,12 +3,21 @@
   "private": true,
   "version": "0.0.1",
   "type": "module",
+  "main": "dist/lib/index.umd.js",
+  "types": "dist/lib/index.d.ts",
+  "module": "dist/lib/index.es.js",
+  "files": [
+    "dist/lib",
+    "README.md",
+    "package.json"
+  ],
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
+    "build": "npm run build:lib",
+    "build:lib": "vite build --config vite.lib.config.ts",
+    "build:example": "tsc && vite build",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview",
-    "build:lib": "vite build --config vite.lib.config.ts"
+    "preview": "vite preview"
   },
   "dependencies": {
     "react": "^18.2.0",
