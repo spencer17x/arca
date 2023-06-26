@@ -7,6 +7,7 @@ on:
       - "vite-plugin-*" # Push events to matching vite-plugin-*, i.e. vite-plugin-(sugar)@1.0.0
       - "create-arca*" # Push events to matching create-arca*, i.e. create-arca@1.0.0
       - "ar-changelog*" # Push events to matching ar-changelog*, i.e. ar-changelog@1.0.0
+      - "babylonjs-*" # Push events to matching babylonjs-*, i.e. babylonjs-(gui)@1.0.0
 
 jobs:
   publish:
