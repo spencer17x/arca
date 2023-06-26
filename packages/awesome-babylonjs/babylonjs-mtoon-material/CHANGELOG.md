@@ -1,3 +1,12 @@
+## [0.0.2](https://github.com/Spencer17x/arca/compare/babylonjs-mtoon-material@0.0.1...babylonjs-mtoon-material@0.0.2) (2023-06-26)
+
+
+### Features
+
+* **babylonjs-mtoon-material:** update ([3228382](https://github.com/Spencer17x/arca/commit/3228382dfd5f215c0b97dbb41315c8e2cc34b88d))
+
+
+
 ## 0.0.1 (2023-06-26)
 
 
