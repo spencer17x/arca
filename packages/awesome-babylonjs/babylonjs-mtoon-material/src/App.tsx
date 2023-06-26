@@ -1,23 +1,26 @@
 import './App.css';
 
 import { useEffect, useRef } from 'react';
-
-import { ArcRotateCamera } from '@babylonjs/core/Cameras/arcRotateCamera';
-import { Engine } from '@babylonjs/core/Engines/engine';
-import { DirectionalLight } from '@babylonjs/core/Lights/directionalLight';
-import { HemisphericLight } from '@babylonjs/core/Lights/hemisphericLight';
-import { PointLight } from '@babylonjs/core/Lights/pointLight';
-import { ShadowGenerator } from '@babylonjs/core/Lights/Shadows/shadowGenerator';
-import { Texture } from '@babylonjs/core/Materials/Textures/texture';
-import { Color3, Vector3 } from '@babylonjs/core/Maths/math';
-import { CreateSphere } from '@babylonjs/core/Meshes/Builders/sphereBuilder';
-import { CreateTorusKnot } from '@babylonjs/core/Meshes/Builders/torusKnotBuilder';
-import { VertexBuffer } from '@babylonjs/core/Buffers/buffer';
-import { Scene } from '@babylonjs/core/scene';
-import { MToonMaterial } from './lib';
+import {
+	ArcRotateCamera,
+	CreateSphere,
+	CreateTorusKnot,
+	DirectionalLight,
+	Engine,
+	HemisphericLight,
+	PointLight,
+	ShadowGenerator,
+	Texture,
+	Vector3,
+	Color3,
+	VertexBuffer,
+	Scene
+} from '@babylonjs/core';
 
 import '@babylonjs/core/Helpers/sceneHelpers';
 import '@babylonjs/inspector';
+
+import { MToonMaterial } from './lib';
 
 interface DebugProperties {
 	webgl1: boolean;
@@ -42,7 +45,7 @@ function App() {
 		(async function () {
 			const canvas = canvasRef.current;
 			if (!canvas) {
-				throw new Error('Canvas not found');
+				throw new Error('canvas is not initialized');
 			}
 			const debugProperties = getDebugProperties();
 			const engine = new Engine(canvas, true, {
@@ -240,7 +243,6 @@ function App() {
 			window.addEventListener('resize', () => {
 				engine.resize();
 			});
-			(window as any).currentScene = scene;
 		}());
 	}, []);
 

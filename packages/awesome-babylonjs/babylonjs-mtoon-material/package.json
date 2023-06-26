@@ -7,20 +7,21 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "build:lib": "vite build --config vite.lib.config.ts"
   },
   "dependencies": {
-    "@babylonjs/core": "^6.9.0",
-    "@babylonjs/gui": "^6.9.0",
-    "@babylonjs/gui-editor": "^6.9.0",
-    "@babylonjs/inspector": "^6.9.0",
-    "@babylonjs/loaders": "^6.9.0",
-    "@babylonjs/materials": "^6.9.0",
-    "@babylonjs/serializers": "^6.9.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
+    "@babylonjs/core": "^6.8.0",
+    "@babylonjs/gui": "^6.8.0",
+    "@babylonjs/gui-editor": "^6.8.0",
+    "@babylonjs/inspector": "^6.8.0",
+    "@babylonjs/loaders": "^6.8.0",
+    "@babylonjs/materials": "^6.8.0",
+    "@babylonjs/serializers": "^6.8.0",
     "@types/react": "^18.0.37",
     "@types/react-dom": "^18.0.11",
     "@typescript-eslint/eslint-plugin": "^5.59.0",
@@ -32,6 +33,7 @@
     "tslib": "^2.2.0",
     "typescript": "^5.0.2",
     "vite": "^4.3.9",
+    "vite-plugin-dts": "3.0.0-beta.1",
     "vite-plugin-glsl": "^1.1.2"
   }
 }
