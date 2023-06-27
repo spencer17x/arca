@@ -1,6 +1,6 @@
 {
   "name": "babylonjs-mtoon-material",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "type": "module",
   "main": "dist/lib/index.umd.js",
   "types": "dist/lib/index.d.ts",
