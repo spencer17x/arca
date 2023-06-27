@@ -97,7 +97,7 @@ importers:
       '@typescript-eslint/parser': ^5.59.0
       '@vitejs/plugin-react': ^4.0.0
       babylonjs-gltf2interface: ^6.8.0
-      babylonjs-mtoon-material: workspace:^0.0.3
+      babylonjs-mtoon-material: workspace:^0.0.5
       eslint: ^8.38.0
       eslint-plugin-react-hooks: ^4.6.0
       eslint-plugin-react-refresh: ^0.3.4
@@ -983,9 +983,9 @@ packages:
       '@babylonjs/core': 6.9.0
       '@babylonjs/gui': 6.9.0_@babylonjs+core@6.9.0
       '@babylonjs/gui-editor': 6.9.0_l2in5bg62hnvp55nhqk7w6cmzi
-      '@babylonjs/loaders': 6.9.0_@babylonjs+core@6.9.0
+      '@babylonjs/loaders': 6.9.0_neglycxjrdynkvjuk4xyoq7naq
       '@babylonjs/materials': 6.9.0_@babylonjs+core@6.9.0
-      '@babylonjs/serializers': 6.9.0_@babylonjs+core@6.9.0
+      '@babylonjs/serializers': 6.9.0_neglycxjrdynkvjuk4xyoq7naq
       '@fortawesome/fontawesome-svg-core': 6.4.0
       '@fortawesome/free-regular-svg-icons': 6.4.0
       '@fortawesome/free-solid-svg-icons': 6.4.0
