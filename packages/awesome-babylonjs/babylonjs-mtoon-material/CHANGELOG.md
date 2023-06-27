@@ -1,3 +1,12 @@
+## [0.0.5](https://github.com/Spencer17x/arca/compare/babylonjs-mtoon-material@0.0.4...babylonjs-mtoon-material@0.0.5) (2023-06-27)
+
+
+### Bug Fixes
+
+* **babylonjs-mtoon-material:** update package.json ([ae7c1aa](https://github.com/Spencer17x/arca/commit/ae7c1aad42b5a9dc4f91508ad6a2d293f4b80392))
+
+
+
 ## [0.0.4](https://github.com/Spencer17x/arca/compare/babylonjs-mtoon-material@0.0.3...babylonjs-mtoon-material@0.0.4) (2023-06-27)
 
 
