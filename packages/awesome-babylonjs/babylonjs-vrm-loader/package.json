@@ -1,6 +1,6 @@
 {
   "name": "babylonjs-vrm-loader",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
   "main": "dist/lib/index.umd.js",
   "types": "dist/lib/index.d.ts",
