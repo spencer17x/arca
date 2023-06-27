@@ -5,8 +5,7 @@ Refer to https://github.com/virtual-cast/babylon-vrm-loader
 ## Quick Start
 
 ```sh
-pnpm add @babylonjs/loaders
-pnpm add babylonjs-vrm-loader
+pnpm add @babylonjs/core @babylonjs/loaders babylonjs-vrm-loader
 ```
 
 ```ts
