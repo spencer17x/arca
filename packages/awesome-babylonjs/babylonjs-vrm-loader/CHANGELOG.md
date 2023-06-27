@@ -1,3 +1,12 @@
+## [0.0.6](https://github.com/Spencer17x/arca/compare/babylonjs-vrm-loader@0.0.5...babylonjs-vrm-loader@0.0.6) (2023-06-27)
+
+
+### Bug Fixes
+
+* **babylonjs-vrm-loader:** build error ([ce54411](https://github.com/Spencer17x/arca/commit/ce5441156c9cad523f90a70b1b97d8a85142a695))
+
+
+
 ## [0.0.5](https://github.com/Spencer17x/arca/compare/babylonjs-vrm-loader@0.0.4...babylonjs-vrm-loader@0.0.5) (2023-06-27)
 
 
