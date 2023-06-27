@@ -14,13 +14,12 @@ export default defineConfig({
 			formats: ['es', 'umd']
 		},
 		rollupOptions: {
-			external: ['@babylonjs/core', '@babylonjs/loaders', '@babylonjs/loaders/glTF/2.0'],
+			external: ['@babylonjs/core', '@babylonjs/loaders'],
 
 			output: {
 				globals: {
 					'@babylonjs/core': 'BABYLON',
 					'@babylonjs/loaders': 'LOADERS',
-					'@babylonjs/loaders/glTF/2.0': 'LOADERS.GLTF2'
 				}
 			},
 		}
