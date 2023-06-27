@@ -14,11 +14,12 @@ export default defineConfig({
 			formats: ['es', 'umd']
 		},
 		rollupOptions: {
-			external: ['@babylonjs/core'],
+			external: ['@babylonjs/core', '@babylonjs/loaders'],
 
 			output: {
 				globals: {
-					'@babylonjs/core': 'BABYLON'
+					'@babylonjs/core': 'BABYLON',
+					'@babylonjs/loaders': 'LOADERS'
 				}
 			},
 		}
