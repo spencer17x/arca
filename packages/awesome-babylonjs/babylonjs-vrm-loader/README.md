@@ -16,3 +16,8 @@ import 'babylonjs-vrm-loader';
 
 - [x] Supports Babylon.js 6.x
 - [ ] Supports VRM 1.0
+
+## Examples
+
+* https://playground.babylonjs.com/#K5W35Y#229
+* https://playground.babylonjs.com/#K5W35Y#230
