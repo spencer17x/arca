@@ -5,6 +5,11 @@
   "main": "dist/lib/index.es.js",
   "types": "dist/lib/index.d.ts",
   "module": "dist/lib/index.es.js",
+  "files": [
+    "dist/lib",
+    "README.md",
+    "package.json"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "npm run build:lib",
