@@ -1,6 +1,6 @@
 {
   "name": "vite-plugin-friendly-type-imports",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "type": "module",
   "main": "dist/lib/index.es.js",
   "types": "dist/lib/index.d.ts",
