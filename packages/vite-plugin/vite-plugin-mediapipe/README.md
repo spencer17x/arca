@@ -1,6 +1,6 @@
 # vite-plugin-mediapipe
 
-## Quick Start
+## Usage
 
 ```bash
 pnpm add vite-plugin-mediapipe -D
