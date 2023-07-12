@@ -29,7 +29,7 @@ function App() {
 		(async function () {
 			const modelUrl = 'https://a-cdn.qbox.net/test';
 			await scene.debugLayer.show();
-			await SceneLoader.ImportMeshAsync('', modelUrl + '/models/vrm/Ashtra.vrm', '', scene);
+			await SceneLoader.ImportMeshAsync('', modelUrl + '/models/vrm/Keqing.vrm', '', scene);
 		}());
 
 		engine.runRenderLoop(() => {

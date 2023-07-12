@@ -1,7 +1,10 @@
+import type { Material } from '@babylonjs/core/Materials/material';
 import type { Mesh } from '@babylonjs/core/Meshes/mesh';
-import type { IGLTFLoaderExtension, IMeshPrimitive } from '@babylonjs/loaders/glTF/2.0';
+import type { Nullable } from '@babylonjs/core/types';
+import type { IGLTFLoaderExtension, IMaterial, IMeshPrimitive } from '@babylonjs/loaders/glTF/2.0';
 import { GLTFLoader } from '@babylonjs/loaders/glTF/2.0';
 import { VRMManager } from './vrm-manager';
+import { VRMMaterialGenerator } from './vrm-material-generator';
 
 /**
  * `extensions` に入る拡張キー
@@ -82,6 +85,14 @@ export class VRM implements IGLTFLoaderExtension {
         babylonMesh.metadata = babylonMesh.metadata || {};
         babylonMesh.metadata.vrmTargetNames = primitive.extras.targetNames;
         return null;
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public _loadMaterialAsync(context: string, material: IMaterial, mesh: Mesh, babylonDrawMode: number, assign: (babylonMaterial: Material) => void): Nullable<Promise<Material>> {
+        // ジェネレータでマテリアルを生成する
+        return new VRMMaterialGenerator(this.loader).generate(context, material, mesh, babylonDrawMode, assign);
     }
 }
 
