@@ -1,11 +1,10 @@
 import { defineConfig } from 'vite';
 import * as path from 'path';
-import glsl from 'vite-plugin-glsl';
 import dts from 'vite-plugin-dts';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-	plugins: [dts(), glsl()],
+	plugins: [dts()],
 	build: {
 		outDir: 'dist/lib',
 		lib: {

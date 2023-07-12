@@ -20,10 +20,6 @@
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
 
-    "types": [
-      "vite-plugin-glsl/ext"
-    ],
-
     "importHelpers": true,
     "declaration": true,
     "sourceMap": true,
