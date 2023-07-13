@@ -28,7 +28,7 @@ function App() {
 
 		(async function () {
 			const modelUrl = 'https://a-cdn.qbox.net/test';
-			await scene.debugLayer.show();
+			// await scene.debugLayer.show();
 			await SceneLoader.ImportMeshAsync('', modelUrl + '/models/vrm/Keqing.vrm', '', scene);
 		}());
 
