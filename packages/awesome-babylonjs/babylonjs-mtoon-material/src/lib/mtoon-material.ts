@@ -1,4 +1,4 @@
-import { serialize, SerializationHelper, serializeAsColor3, expandToProperty, serializeAsTexture } from '@babylonjs/core/Misc/decorators';
+import { serialize, SerializationHelper, serializeAsColor3, expandToProperty } from '@babylonjs/core/Misc/decorators';
 import type { Observer } from '@babylonjs/core/Misc/observable';
 import { SmartArray } from '@babylonjs/core/Misc/smartArray';
 import type { IAnimatable } from '@babylonjs/core/Animations/animatable.interface';
@@ -95,90 +95,130 @@ export enum CullMode {
 export class MToonMaterial extends PushMaterial {
     //#region Properties
     //#region Textures
-    @serializeAsTexture('diffuseTexture')
     private _diffuseTexture: Nullable<BaseTexture> = null;
     /**
      * The basic texture of the material as viewed under a light.
      */
-    @expandToProperty('_markAllSubMeshesAsTexturesAndMiscDirty')
-    public diffuseTexture: Nullable<BaseTexture> = null;
+    get diffuseTexture(): Nullable<BaseTexture> {
+        return this._diffuseTexture;
+    }
+    set diffuseTexture(value: Nullable<BaseTexture>) {
+        this._diffuseTexture = value;
+        this._markAllSubMeshesAsTexturesAndMiscDirty();
+    }
 
-    @serializeAsTexture('emissiveTexture')
     private _emissiveTexture: Nullable<BaseTexture> = null;
     /**
      * Define texture of the material as if self lit.
      * This will be mixed in the final result even in the absence of light.
      */
-    @expandToProperty('_markAllSubMeshesAsTexturesDirty')
-    public emissiveTexture: Nullable<BaseTexture> = null;
+    get emissiveTexture(): Nullable<BaseTexture> {
+        return this._emissiveTexture;
+    }
+    set emissiveTexture(value: Nullable<BaseTexture>) {
+        this._emissiveTexture = value;
+        this._markAllSubMeshesAsTexturesDirty();
+    }
 
-    @serializeAsTexture('bumpTexture')
     private _bumpTexture: Nullable<BaseTexture> = null;
     /**
      * Bump mapping is a technique to simulate bump and dents on a rendered surface.
      * These are made by creating a normal map from an image. The means to do this can be found on the web, a search for 'normal map generator' will bring up free and paid for methods of doing this.
      * @see https://doc.babylonjs.com/how_to/more_materials#bump-map
      */
-    @expandToProperty('_markAllSubMeshesAsTexturesDirty')
-    public bumpTexture: Nullable<BaseTexture> = null;
+    get bumpTexture(): Nullable<BaseTexture> {
+        return this._bumpTexture;
+    }
+    set bumpTexture(value: Nullable<BaseTexture>) {
+        this._bumpTexture = value;
+        this._markAllSubMeshesAsTexturesDirty();
+    }
 
-    @serializeAsTexture('shadeTexture')
     private _shadeTexture: Nullable<BaseTexture> = null;
     /**
-     * The basic texture of the material as viewed does not receive a light
+     * The basic texture of the material as viewed does not receive a light.
      */
-    @expandToProperty('_markAllSubMeshesAsTexturesDirty')
-    public shadeTexture: Nullable<BaseTexture> = null;
+    get shadeTexture(): Nullable<BaseTexture> {
+        return this._shadeTexture;
+    }
+    set shadeTexture(value: Nullable<BaseTexture>) {
+        this._shadeTexture = value;
+        this._markAllSubMeshesAsTexturesDirty();
+    }
 
-    @serializeAsTexture('receiveShadowTexture')
     private _receiveShadowTexture: Nullable<BaseTexture> = null;
     /**
-     * Receiving shadow rate with texture
-     * receiveShadowRate * texture.a
+     * Receiving shadow rate with texture.
+     * receiveShadowRate * texture.a.
      */
-    @expandToProperty('_markAllSubMeshesAsTexturesDirty')
-    public receiveShadowTexture: Nullable<BaseTexture> = null;
+    get receiveShadowTexture(): Nullable<BaseTexture> {
+        return this._receiveShadowTexture;
+    }
+    set receiveShadowTexture(value: Nullable<BaseTexture>) {
+        this._receiveShadowTexture = value;
+        this._markAllSubMeshesAsTexturesDirty();
+    }
 
-    @serializeAsTexture('shadingGradeTexture')
     private _shadingGradeTexture: Nullable<BaseTexture> = null;
     /**
-     * Shading grade rate
-     * shadingGradeRate * (1.0 - texture.r))
+     * Shading grade rate.
+     * shadingGradeRate * (1.0 - texture.r).
      */
-    @expandToProperty('_markAllSubMeshesAsTexturesDirty')
-    public shadingGradeTexture: Nullable<BaseTexture> = null;
+    get shadingGradeTexture(): Nullable<BaseTexture> {
+        return this._shadingGradeTexture;
+    }
+    set shadingGradeTexture(value: Nullable<BaseTexture>) {
+        this._shadingGradeTexture = value;
+        this._markAllSubMeshesAsTexturesDirty();
+    }
 
-    @serializeAsTexture('rimTexture')
     private _rimTexture: Nullable<BaseTexture> = null;
     /**
-     * Parametric Rim Lighting
+     * Parametric Rim Lighting.
      */
-    @expandToProperty('_markAllSubMeshesAsTexturesDirty')
-    public rimTexture: Nullable<BaseTexture> = null;
+    get rimTexture(): Nullable<BaseTexture> {
+        return this._rimTexture;
+    }
+    set rimTexture(value: Nullable<BaseTexture>) {
+        this._rimTexture = value;
+        this._markAllSubMeshesAsTexturesDirty();
+    }
 
-    @serializeAsTexture('matCapTexture')
     private _matCapTexture: Nullable<BaseTexture> = null;
     /**
-     * MatCap Lighting
+     * MatCap Lighting.
      */
-    @expandToProperty('_markAllSubMeshesAsTexturesDirty')
-    public matCapTexture: Nullable<BaseTexture> = null;
+    get matCapTexture(): Nullable<BaseTexture> {
+        return this._matCapTexture;
+    }
+    set matCapTexture(value: Nullable<BaseTexture>) {
+        this._matCapTexture = value;
+        this._markAllSubMeshesAsTexturesDirty();
+    }
 
-    @serializeAsTexture('outlineWidthTexture')
     private _outlineWidthTexture: Nullable<BaseTexture> = null;
     /**
-     * Adjust outline width
+     * Adjust outline width.
      */
-    @expandToProperty('_markAllSubMeshesAsTexturesDirty')
-    public outlineWidthTexture: Nullable<BaseTexture> = null;
+    get outlineWidthTexture(): Nullable<BaseTexture> {
+        return this._outlineWidthTexture;
+    }
+    set outlineWidthTexture(value: Nullable<BaseTexture>) {
+        this._outlineWidthTexture = value;
+        this._markAllSubMeshesAsTexturesDirty();
+    }
 
-    @serializeAsTexture('outlineWidthTexture')
     private _uvAnimationMaskTexture: Nullable<BaseTexture> = null;
     /**
-     * UV animation mask
+     * UV animation mask.
      */
-    @expandToProperty('_markAllSubMeshesAsTexturesDirty')
-    public uvAnimationMaskTexture: Nullable<BaseTexture> = null;
+    get uvAnimationMaskTexture(): Nullable<BaseTexture> {
+        return this._uvAnimationMaskTexture;
+    }
+    set uvAnimationMaskTexture(value: Nullable<BaseTexture>) {
+        this._uvAnimationMaskTexture = value;
+        this._markAllSubMeshesAsTexturesDirty();
+    }
 
     /**
      * the list of textures
