@@ -101,13 +101,13 @@ function App() {
 				const mat = new MToonMaterial('MtoonMaterialNormal', scene);
 				mat.outlineWidthMode = 2;
 				// Textures from https://www.babylonjs-playground.com/#20OAV9#33
-				const diffuse = new Texture('http://i.imgur.com/Wk1cGEq.png', scene);
+				const diffuse = new Texture('textures/Wk1cGEq.png', scene);
 				diffuse.uScale = 4;
 				diffuse.vScale = 4;
 				mat.diffuseTexture = diffuse;
 				mat.shadeTexture = mat.diffuseTexture.clone();
 				mat.shadeColor = new Color3(0.871, 0.196, 0.416);
-				const bump = new Texture('http://i.imgur.com/wGyk6os.png', scene);
+				const bump = new Texture('textures/wGyk6os.png', scene);
 				bump.uScale = 4;
 				bump.vScale = 4;
 				mat.bumpTexture = bump;
@@ -154,14 +154,14 @@ function App() {
 				const mat = new MToonMaterial('MtoonMaterialScroll', scene);
 				mat.outlineWidthMode = 1;
 				// Textures from https://www.babylonjs-playground.com/#20OAV9#33
-				const diffuse = new Texture('http://i.imgur.com/Wk1cGEq.png', scene);
+				const diffuse = new Texture('textures/Wk1cGEq.png', scene);
 				diffuse.uScale = 4;
 				diffuse.vScale = 4;
 				mat.diffuseTexture = diffuse;
 				mat.shadeTexture = mat.diffuseTexture.clone();
 				mat.shadeColor = new Color3(0.5, 0.5, 0.5);
 
-				const bump = new Texture('http://i.imgur.com/wGyk6os.png', scene);
+				const bump = new Texture('textures/wGyk6os.png', scene);
 				bump.uScale = 4;
 				bump.vScale = 4;
 				mat.bumpTexture = bump;
@@ -172,14 +172,14 @@ function App() {
 				const mat = new MToonMaterial('MtoonMaterialScrollY', scene);
 				mat.outlineWidthMode = 1;
 				// Textures from https://www.babylonjs-playground.com/#20OAV9#33
-				const diffuse = new Texture('http://i.imgur.com/Wk1cGEq.png', scene);
+				const diffuse = new Texture('textures/Wk1cGEq.png', scene);
 				diffuse.uScale = 4;
 				diffuse.vScale = 4;
 				mat.diffuseTexture = diffuse;
 				mat.shadeTexture = mat.diffuseTexture.clone();
 				mat.shadeColor = new Color3(0.5, 0.5, 0.5);
 
-				const bump = new Texture('http://i.imgur.com/wGyk6os.png', scene);
+				const bump = new Texture('textures/wGyk6os.png', scene);
 				bump.uScale = 4;
 				bump.vScale = 4;
 				mat.bumpTexture = bump;
@@ -190,14 +190,14 @@ function App() {
 				const mat = new MToonMaterial('MtoonMaterialRotation', scene);
 				mat.outlineWidthMode = 1;
 				// Textures from https://www.babylonjs-playground.com/#20OAV9#33
-				const diffuse = new Texture('http://i.imgur.com/Wk1cGEq.png', scene);
+				const diffuse = new Texture('textures/Wk1cGEq.png', scene);
 				diffuse.uScale = 4;
 				diffuse.vScale = 4;
 				mat.diffuseTexture = diffuse;
 				mat.shadeTexture = mat.diffuseTexture.clone();
 				mat.shadeColor = new Color3(0.5, 0.5, 0.5);
 
-				const bump = new Texture('http://i.imgur.com/wGyk6os.png', scene);
+				const bump = new Texture('textures/wGyk6os.png', scene);
 				bump.uScale = 4;
 				bump.vScale = 4;
 				mat.bumpTexture = bump;
