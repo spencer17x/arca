@@ -1,3 +1,14 @@
+## [0.0.6](https://github.com/Spencer17x/arca/compare/babylonjs-mtoon-material@0.0.5...babylonjs-mtoon-material@0.0.6) (2023-07-13)
+
+
+### Bug Fixes
+
+* **babylonjs-mtoon-material:** replace decorators ([b5d4d2f](https://github.com/Spencer17x/arca/commit/b5d4d2f9a514831197a8b33b4632e992214184b6))
+* **babylonjs-mtoon-material:** use local textures ([1cddcbb](https://github.com/Spencer17x/arca/commit/1cddcbbc42c5edbc80ae86321182b6152d23983a))
+* **babylonjs-mtoon-material:** use raw load glsl ([3322536](https://github.com/Spencer17x/arca/commit/3322536afa856ead2e944c9db52c9e465efc67e1))
+
+
+
 ## [0.0.5](https://github.com/Spencer17x/arca/compare/babylonjs-mtoon-material@0.0.4...babylonjs-mtoon-material@0.0.5) (2023-06-27)
 
 
