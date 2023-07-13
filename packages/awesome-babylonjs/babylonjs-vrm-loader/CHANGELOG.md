@@ -1,3 +1,18 @@
+## [0.0.7](https://github.com/Spencer17x/arca/compare/babylonjs-vrm-loader@0.0.6...babylonjs-vrm-loader@0.0.7) (2023-07-13)
+
+
+### Bug Fixes
+
+* **babylonjs-vrm-loader:** some model load loose material ([a32fa98](https://github.com/Spencer17x/arca/commit/a32fa980f6c3fa2239e92b995bc8427eef94ee5a))
+* **babylonjs-vrm-loader:** some models are not fully loaded ([db242f7](https://github.com/Spencer17x/arca/commit/db242f788a13d57f8f8a749f54a3a4ecb242fca5))
+
+
+### Features
+
+* **babylonjs-vrm-loader:** add example ([ed5da6d](https://github.com/Spencer17x/arca/commit/ed5da6dd4a393b07e540c7b09e59e4f19f2fb8c2))
+
+
+
 ## [0.0.6](https://github.com/Spencer17x/arca/compare/babylonjs-vrm-loader@0.0.5...babylonjs-vrm-loader@0.0.6) (2023-06-27)
 
 
