@@ -95,7 +95,7 @@ importers:
       '@typescript-eslint/parser': ^5.59.0
       '@vitejs/plugin-react': ^4.0.0
       babylonjs-gltf2interface: 6.8.0
-      babylonjs-mtoon-material: workspace:^0.0.6
+      babylonjs-mtoon-material: 0.0.7-beta.0
       eslint: ^8.38.0
       eslint-plugin-react-hooks: ^4.6.0
       eslint-plugin-react-refresh: ^0.3.4
@@ -118,7 +118,7 @@ importers:
       '@typescript-eslint/parser': 5.60.0_7yfldhli4vs6yywnkyiujhawka
       '@vitejs/plugin-react': 4.0.1_vite@4.3.9
       babylonjs-gltf2interface: 6.8.0
-      babylonjs-mtoon-material: link:../babylonjs-mtoon-material
+      babylonjs-mtoon-material: 0.0.7-beta.0_@babylonjs+core@6.8.0
       eslint: 8.43.0
       eslint-plugin-react-hooks: 4.6.0_eslint@8.43.0
       eslint-plugin-react-refresh: 0.3.5_eslint@8.43.0
@@ -2576,6 +2576,14 @@ packages:
 
   /babylonjs-gltf2interface/6.8.0:
     resolution: {integrity: sha512-uCehLc8CnMUvWYttqQmJCHnhUjoftb4gK6Q+GXclgNr3CWiNDXHnbiBZQynA8SBfgkgE3bRk1+u+J5PQwkOepQ==}
+    dev: true
+
+  /babylonjs-mtoon-material/0.0.7-beta.0_@babylonjs+core@6.8.0:
+    resolution: {integrity: sha512-lpDBYj53WsnE6YNJ2SVTtnIEEHX+D/1HFATwtrBoX9GvWqvXwyngacsILN34UnMhMB5N3G94//TogGAor35YOA==}
+    peerDependencies:
+      '@babylonjs/core': 6.8.0
+    dependencies:
+      '@babylonjs/core': 6.8.0
     dev: true
 
   /balanced-match/1.0.2:
