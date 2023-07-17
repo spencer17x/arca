@@ -1,3 +1,12 @@
+## [0.0.8-beta.0](https://github.com/Spencer17x/arca/compare/babylonjs-vrm-loader@0.0.7...babylonjs-vrm-loader@0.0.8-beta.0) (2023-07-17)
+
+
+### Bug Fixes
+
+* **babylonjs-vrm-loader:** update babylonjs-mtoon-material ([36baaf5](https://github.com/Spencer17x/arca/commit/36baaf58bbcd37ebb20dd064b1167785e8e8fb3b))
+
+
+
 ## [0.0.7](https://github.com/Spencer17x/arca/compare/babylonjs-vrm-loader@0.0.6...babylonjs-vrm-loader@0.0.7) (2023-07-13)
 
 
