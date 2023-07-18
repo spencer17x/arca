@@ -22,6 +22,9 @@ export default defineConfig({
 					'@babylonjs/loaders': 'LOADERS',
 				}
 			},
-		}
+		},
+		commonjsOptions: {
+			include: [/babylon-mtoon-material/, /node_modules/],
+		},
 	}
 });
