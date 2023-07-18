@@ -18,10 +18,10 @@ jobs:
     timeout-minutes: 15
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository and submodules
+      - name: Checkout repository
         uses: actions/checkout@v2
-        with:
-          submodules: recursive
+      - name: Checkout submodules
+        run: git submodule update --init --recursive
 
       - name: Setup node.js
         uses: actions/setup-node@v2

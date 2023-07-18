@@ -16,10 +16,10 @@ jobs:
     runs-on: ubuntu-latest
     environment: Release
     steps:
-      - name: Checkout repository and submodules
+      - name: Checkout repository
         uses: actions/checkout@v2
-        with:
-          submodules: recursive
+      - name: Checkout submodules
+        run: git submodule update --init --recursive
 
       - name: Install pnpm
         uses: pnpm/action-setup@v2
