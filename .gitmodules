@@ -1,0 +1,4 @@
+[submodule "packages/awesome-babylonjs/babylon-mtoon-material"]
+	path = packages/awesome-babylonjs/babylon-mtoon-material
+	url = https://github.com/Spencer17x/babylon-mtoon-material.git
+	branch = 6.x
