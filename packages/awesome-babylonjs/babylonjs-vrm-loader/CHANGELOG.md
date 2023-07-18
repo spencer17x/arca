@@ -1,3 +1,7 @@
+## [0.0.8-beta.2](https://github.com/Spencer17x/arca/compare/babylonjs-vrm-loader@0.0.8-beta.1...babylonjs-vrm-loader@0.0.8-beta.2) (2023-07-18)
+
+
+
 ## [0.0.8-beta.1](https://github.com/Spencer17x/arca/compare/babylonjs-vrm-loader@0.0.8-beta.0...babylonjs-vrm-loader@0.0.8-beta.1) (2023-07-18)
 
 
