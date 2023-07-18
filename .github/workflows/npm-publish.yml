@@ -19,7 +19,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
         with:
-          submodules: 'true'
+          submodules: recursive
 
       - name: Install pnpm
         uses: pnpm/action-setup@v2
