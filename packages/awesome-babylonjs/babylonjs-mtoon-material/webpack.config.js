@@ -33,7 +33,7 @@ module.exports = [
                 name: 'babylon-mtoon-material',
                 type: 'umd',
             },
-            filename: 'index.module.js',
+            filename: 'index.umd.js',
         },
         externals: [
             /^@babylonjs\/core.*$/,
@@ -49,7 +49,7 @@ module.exports = [
                 type: 'window',
                 export: 'MToonMaterial',
             },
-            filename: 'index.js',
+            filename: 'index.window.js',
         },
         externals: [
             ({context, request}, callback) => {

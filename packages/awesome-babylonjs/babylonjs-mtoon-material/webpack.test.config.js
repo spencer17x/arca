@@ -9,7 +9,7 @@ module.exports = {
             name: 'babylon-mtoon-material',
             type: 'umd',
         },
-        filename: '[name].js',
+        filename: '[name].umd.js',
         path: resolve(__dirname, 'test'),
     },
     module: {

@@ -15,7 +15,7 @@
     "package.json"
   ],
   "typings": "dist/index.d.ts",
-  "main": "dist/index.module.js",
+  "main": "dist/index.umd.js",
   "scripts": {
     "build": "webpack",
     "build:test": "webpack --config webpack.test.config.js",
