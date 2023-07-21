@@ -1,3 +1,12 @@
+## [0.0.9](https://github.com/spencer17x/arca/compare/babylonjs-vrm-loader@0.0.8...babylonjs-vrm-loader@0.0.9) (2023-07-21)
+
+
+### Features
+
+* **babylonjs-vrm-loader:** update webpack config ([5fe7f3d](https://github.com/spencer17x/arca/commit/5fe7f3db7357875c194315a00a982c0db912b19d))
+
+
+
 ## [0.0.8](https://github.com/spencer17x/arca/compare/babylonjs-vrm-loader@0.0.8-beta.2...babylonjs-vrm-loader@0.0.8) (2023-07-21)
 
 
