@@ -126,8 +126,8 @@ importers:
       '@typescript-eslint/eslint-plugin': ~5.16.0
       '@typescript-eslint/parser': ~5.16.0
       ansi-html-community: ^0.0.8
-      babylonjs-gltf2interface: ^5.0.0
-      babylonjs-mtoon-material: workspace:0.0.6
+      babylonjs-gltf2interface: 6.8.0
+      babylonjs-mtoon-material: workspace:0.0.8
       cz-conventional-changelog: 3.3.0
       eslint: ^8.11.0
       eslint-config-prettier: ~8.5.0
@@ -150,15 +150,15 @@ importers:
       '@babylonjs/gui': 6.8.0_@babylonjs+core@6.8.0
       '@babylonjs/gui-editor': 6.8.0_4kwszibidqtexsa2uivliqjzsm
       '@babylonjs/inspector': 6.8.0_5xrcneawr4xsmpavc4q4yrrfsi
-      '@babylonjs/loaders': 6.8.0_2trhnvpb3cdbhxvtrstotwqzse
+      '@babylonjs/loaders': 6.8.0_5behteowuvpj63blv4mft4cmfu
       '@babylonjs/materials': 6.8.0_@babylonjs+core@6.8.0
-      '@babylonjs/serializers': 6.8.0_2trhnvpb3cdbhxvtrstotwqzse
+      '@babylonjs/serializers': 6.8.0_5behteowuvpj63blv4mft4cmfu
       '@semantic-release/git': 10.0.1_semantic-release@19.0.5
       '@types/node': 15.14.9
       '@typescript-eslint/eslint-plugin': 5.16.0_aq6t2ztb26cibc3gfkpqd3yacq
       '@typescript-eslint/parser': 5.16.0_uywfi3zeys2kqr4zjbjh4sypl4
       ansi-html-community: 0.0.8
-      babylonjs-gltf2interface: 5.57.1
+      babylonjs-gltf2interface: 6.8.0
       babylonjs-mtoon-material: link:../babylonjs-mtoon-material
       cz-conventional-changelog: 3.3.0
       eslint: 8.43.0
@@ -1192,9 +1192,9 @@ packages:
       '@babylonjs/core': 6.8.0
       '@babylonjs/gui': 6.8.0_@babylonjs+core@6.8.0
       '@babylonjs/gui-editor': 6.8.0_4kwszibidqtexsa2uivliqjzsm
-      '@babylonjs/loaders': 6.8.0_2trhnvpb3cdbhxvtrstotwqzse
+      '@babylonjs/loaders': 6.8.0_5behteowuvpj63blv4mft4cmfu
       '@babylonjs/materials': 6.8.0_@babylonjs+core@6.8.0
-      '@babylonjs/serializers': 6.8.0_2trhnvpb3cdbhxvtrstotwqzse
+      '@babylonjs/serializers': 6.8.0_5behteowuvpj63blv4mft4cmfu
       '@fortawesome/fontawesome-svg-core': 6.4.0
       '@fortawesome/free-regular-svg-icons': 6.4.0
       '@fortawesome/free-solid-svg-icons': 6.4.0
@@ -1225,16 +1225,6 @@ packages:
       '@types/react-dom': 18.2.6
     dev: true
 
-  /@babylonjs/loaders/6.8.0_2trhnvpb3cdbhxvtrstotwqzse:
-    resolution: {integrity: sha512-Ze3dsjwQ6ORYTkbacdlZVeN1PvC0KYcN2hzDNAqiQ0eeQkk96QDusgLkVHMM1UW55hS5PQefTua7iylOxWetDw==}
-    peerDependencies:
-      '@babylonjs/core': ^6.0.0
-      babylonjs-gltf2interface: ^6.0.0
-    dependencies:
-      '@babylonjs/core': 6.8.0
-      babylonjs-gltf2interface: 5.57.1
-    dev: true
-
   /@babylonjs/loaders/6.8.0_5behteowuvpj63blv4mft4cmfu:
     resolution: {integrity: sha512-Ze3dsjwQ6ORYTkbacdlZVeN1PvC0KYcN2hzDNAqiQ0eeQkk96QDusgLkVHMM1UW55hS5PQefTua7iylOxWetDw==}
     peerDependencies:
@@ -1251,16 +1241,6 @@ packages:
       '@babylonjs/core': ^6.0.0
     dependencies:
       '@babylonjs/core': 6.8.0
-    dev: true
-
-  /@babylonjs/serializers/6.8.0_2trhnvpb3cdbhxvtrstotwqzse:
-    resolution: {integrity: sha512-/deOpTX3Lnll3PM9Um7l+e33mVPe65BgAOlgskrcH6XmT5BaltedYwQktTyblrZs8nQEs90elPpdOb0bsoY4HA==}
-    peerDependencies:
-      '@babylonjs/core': ^6.0.0
-      babylonjs-gltf2interface: ^6.0.0
-    dependencies:
-      '@babylonjs/core': 6.8.0
-      babylonjs-gltf2interface: 5.57.1
     dev: true
 
   /@babylonjs/serializers/6.8.0_5behteowuvpj63blv4mft4cmfu:
@@ -4052,10 +4032,6 @@ packages:
       '@babel/core': 7.22.5
       babel-plugin-jest-hoist: 28.1.3
       babel-preset-current-node-syntax: 1.0.1_@babel+core@7.22.5
-    dev: true
-
-  /babylonjs-gltf2interface/5.57.1:
-    resolution: {integrity: sha512-RZnaKfJ6Q/AYLdIjBYMRxCW/HPEC8jabAL1U8wJ0KVziw6NSbSV6S80S22fUCPTyaZ7nCekn1TYg1IPmJ/eA6w==}
     dev: true
 
   /babylonjs-gltf2interface/6.8.0:
@@ -6866,7 +6842,7 @@ packages:
       source-map: 0.6.1
       wordwrap: 1.0.0
     optionalDependencies:
-      uglify-js: 3.14.4
+      uglify-js: 3.17.4
 
   /hard-rejection/2.1.0:
     resolution: {integrity: sha512-VIZB+ibDhx7ObhAe7OVtoEbuP4h/MuOTHJ+J8h/eBXotJYl0fBgR72xDFCKgIh22OJZIOVNxBMWuhAr10r8HdA==}
@@ -11908,6 +11884,14 @@ packages:
     engines: {node: '>=0.8.0'}
     hasBin: true
     requiresBuild: true
+    dev: true
+
+  /uglify-js/3.17.4:
+    resolution: {integrity: sha512-T9q82TJI9e/C1TAxYvfb16xO120tMVFZrGA3f9/P4424DNu6ypK103y0GPFVa17yotwSyZW5iYXgjYHkGrJW/g==}
+    engines: {node: '>=0.8.0'}
+    hasBin: true
+    requiresBuild: true
+    optional: true
 
   /unbox-primitive/1.0.2:
     resolution: {integrity: sha512-61pPlCD9h51VoreyJ0BReideM3MDKMKnh6+V9L08331ipq6Q8OFXZYiqP6n/tbHx4s5I9uRhcye6BrbkizkBDw==}
