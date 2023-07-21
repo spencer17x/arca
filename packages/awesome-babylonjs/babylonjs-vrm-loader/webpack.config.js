@@ -33,7 +33,7 @@ module.exports = [
                 name: 'babylonjs-vrm-loader',
                 type: 'umd',
             },
-            filename: 'index.module.js',
+            filename: 'index.umd.js',
             path: resolve(__dirname, 'dist'),
         },
         externals: [
@@ -49,7 +49,7 @@ module.exports = [
                 name: 'VRMLoader',
                 type: 'window',
             },
-            filename: 'index.js',
+            filename: 'index.window.js',
             path: resolve(__dirname, 'dist'),
         },
         externals: [
