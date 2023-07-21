@@ -1,3 +1,12 @@
+## [0.0.9](https://github.com/spencer17x/arca/compare/babylonjs-mtoon-material@0.0.8...babylonjs-mtoon-material@0.0.9) (2023-07-21)
+
+
+### Features
+
+* **babylonjs-mtoon-material:** update webpack config ([0bf9389](https://github.com/spencer17x/arca/commit/0bf9389df3dabaa9d2bd76a7f4b7134f020bc3b7))
+
+
+
 ## [0.0.8](https://github.com/spencer17x/arca/compare/babylonjs-mtoon-material@0.0.7...babylonjs-mtoon-material@0.0.8) (2023-07-21)
 
 
