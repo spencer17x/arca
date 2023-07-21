@@ -15,7 +15,7 @@
     "build": "npm run build:lib && npm run build:example",
     "build:lib": "npm run build:workspace && vite build --config vite.lib.config.ts",
     "build:example": "npm run build:workspace && tsc && vite build",
-    "build:mtoon-material": "pnpm -F babylon-mtoon-material run build",
+    "build:mtoon-material": "pnpm -F babylonjs-mtoon-material run build",
     "build:workspace": "npm run build:mtoon-material",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview"
@@ -35,7 +35,7 @@
     "@vitejs/plugin-react": "^4.0.0",
     "babylon-mtoon-material": "workspace:^5.1.1",
     "babylonjs-gltf2interface": "6.8.0",
-    "babylonjs-mtoon-material": "0.0.7-beta.0",
+    "babylonjs-mtoon-material": "workspace:0.0.6",
     "eslint": "^8.38.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.3.4",
