@@ -112,6 +112,72 @@ importers:
       webpack-dev-server: 4.15.1_w3wu7rcwmvifygnqiqkxwjppse
       webpack-merge: 5.9.0
 
+  packages/awesome-babylonjs/babylon-vrm-loader:
+    specifiers:
+      '@babylonjs/core': 6.8.0
+      '@babylonjs/gui': 6.8.0
+      '@babylonjs/gui-editor': 6.8.0
+      '@babylonjs/inspector': 6.8.0
+      '@babylonjs/loaders': 6.8.0
+      '@babylonjs/materials': 6.8.0
+      '@babylonjs/serializers': 6.8.0
+      '@semantic-release/git': ^10.0.1
+      '@spencer17x/babylon-mtoon-material': workspace:^6.0.0
+      '@types/node': ^15.12.2
+      '@typescript-eslint/eslint-plugin': ~5.16.0
+      '@typescript-eslint/parser': ~5.16.0
+      ansi-html-community: ^0.0.8
+      babylonjs-gltf2interface: 6.8.0
+      cz-conventional-changelog: 3.3.0
+      eslint: ^8.11.0
+      eslint-config-prettier: ~8.5.0
+      eslint-plugin-import: ~2.26.0
+      eslint-plugin-prettier: ~4.0.0
+      events: ^3.3.0
+      gh-pages: ^4.0.0
+      html-entities: ^2.4.0
+      prettier: ^2.7.1
+      semantic-release: ^19.0.3
+      ts-loader: ^9.2.6
+      tslib: ^2.4.0
+      typescript: ~4.6.2
+      webpack: ^5.73.0
+      webpack-cli: ^4.10.0
+      webpack-dev-server: ^4.9.3
+      webpack-merge: ^5.8.0
+    devDependencies:
+      '@babylonjs/core': 6.8.0
+      '@babylonjs/gui': 6.8.0_@babylonjs+core@6.8.0
+      '@babylonjs/gui-editor': 6.8.0_4kwszibidqtexsa2uivliqjzsm
+      '@babylonjs/inspector': 6.8.0_5xrcneawr4xsmpavc4q4yrrfsi
+      '@babylonjs/loaders': 6.8.0_5behteowuvpj63blv4mft4cmfu
+      '@babylonjs/materials': 6.8.0_@babylonjs+core@6.8.0
+      '@babylonjs/serializers': 6.8.0_5behteowuvpj63blv4mft4cmfu
+      '@semantic-release/git': 10.0.1_semantic-release@19.0.5
+      '@spencer17x/babylon-mtoon-material': link:../babylon-mtoon-material
+      '@types/node': 15.14.9
+      '@typescript-eslint/eslint-plugin': 5.16.0_aq6t2ztb26cibc3gfkpqd3yacq
+      '@typescript-eslint/parser': 5.16.0_uywfi3zeys2kqr4zjbjh4sypl4
+      ansi-html-community: 0.0.8
+      babylonjs-gltf2interface: 6.8.0
+      cz-conventional-changelog: 3.3.0
+      eslint: 8.43.0
+      eslint-config-prettier: 8.5.0_eslint@8.43.0
+      eslint-plugin-import: 2.26.0_mwt3dwg34huiynx3bhb2sudz2i
+      eslint-plugin-prettier: 4.0.0_e7bulavoifhsldlygovgyd3omq
+      events: 3.3.0
+      gh-pages: 4.0.0
+      html-entities: 2.4.0
+      prettier: 2.8.8
+      semantic-release: 19.0.5
+      ts-loader: 9.4.4_yzbccmqfpu5jtrk3hmpuxb2uk4
+      tslib: 2.6.0
+      typescript: 4.6.4
+      webpack: 5.88.2_webpack-cli@4.10.0
+      webpack-cli: 4.10.0_55ctblq7vmnkc7msvxpxtdxasq
+      webpack-dev-server: 4.15.1_w3wu7rcwmvifygnqiqkxwjppse
+      webpack-merge: 5.9.0
+
   packages/awesome-babylonjs/babylonjs-mtoon-material:
     specifiers:
       '@babylonjs/core': 6.8.0
@@ -172,7 +238,6 @@ importers:
       '@typescript-eslint/eslint-plugin': ^5.59.0
       '@typescript-eslint/parser': ^5.59.0
       '@vitejs/plugin-react': ^4.0.0
-      babylon-mtoon-material: workspace:^5.1.1
       babylonjs-gltf2interface: 6.8.0
       babylonjs-mtoon-material: workspace:0.0.6
       eslint: ^8.38.0
@@ -196,7 +261,6 @@ importers:
       '@typescript-eslint/eslint-plugin': 5.60.0_6yzi2ymi2jevhjfd3hf6w262e4
       '@typescript-eslint/parser': 5.60.0_7yfldhli4vs6yywnkyiujhawka
       '@vitejs/plugin-react': 4.0.1_vite@4.4.4
-      babylon-mtoon-material: link:../babylon-mtoon-material
       babylonjs-gltf2interface: 6.8.0
       babylonjs-mtoon-material: link:../babylonjs-mtoon-material
       eslint: 8.43.0
@@ -1173,6 +1237,18 @@ packages:
     resolution: {integrity: sha512-wTWj9TsnVGqfXt+tXKi7+SIWi4MzBMwIq+jcylRR1qzHTHFfMuKrRRLZJ5jQtpAhcDPI2TOuJ3/NOccPyawlgQ==}
     dev: true
 
+  /@babylonjs/gui-editor/6.8.0_4kwszibidqtexsa2uivliqjzsm:
+    resolution: {integrity: sha512-XSTYEfCdf04Th1xrTuIO/lHBSmfiG4s4fIDzpi0+OERO19bKQffzhFGh95NVzdL0XhvnQT88Fb6bkvsuAxFI/Q==}
+    peerDependencies:
+      '@babylonjs/core': ^6.0.0
+      '@babylonjs/gui': ^6.0.0
+      '@types/react': '>=16.7.3'
+      '@types/react-dom': '>=16.0.9'
+    dependencies:
+      '@babylonjs/core': 6.8.0
+      '@babylonjs/gui': 6.8.0_@babylonjs+core@6.8.0
+    dev: true
+
   /@babylonjs/gui-editor/6.8.0_rk3ukveargtmfmjnndhxvg5b2y:
     resolution: {integrity: sha512-XSTYEfCdf04Th1xrTuIO/lHBSmfiG4s4fIDzpi0+OERO19bKQffzhFGh95NVzdL0XhvnQT88Fb6bkvsuAxFI/Q==}
     peerDependencies:
@@ -1195,6 +1271,29 @@ packages:
       '@babylonjs/core': 6.8.0
     dev: true
 
+  /@babylonjs/inspector/6.8.0_5xrcneawr4xsmpavc4q4yrrfsi:
+    resolution: {integrity: sha512-tu3nb0l7xSYXkTaKAnP7zBL34qR9J0op+NzOn4Y1C9RcY91yH3YfLTdoo4pFA0K5NaS99W0nAIjCcrS2BPBmMQ==}
+    peerDependencies:
+      '@babylonjs/core': ^6.0.0
+      '@babylonjs/gui': ^6.0.0
+      '@babylonjs/gui-editor': ^6.0.0
+      '@babylonjs/loaders': ^6.0.0
+      '@babylonjs/materials': ^6.0.0
+      '@babylonjs/serializers': ^6.0.0
+      '@types/react': '>=16.7.3'
+      '@types/react-dom': '>=16.0.9'
+    dependencies:
+      '@babylonjs/core': 6.8.0
+      '@babylonjs/gui': 6.8.0_@babylonjs+core@6.8.0
+      '@babylonjs/gui-editor': 6.8.0_4kwszibidqtexsa2uivliqjzsm
+      '@babylonjs/loaders': 6.8.0_5behteowuvpj63blv4mft4cmfu
+      '@babylonjs/materials': 6.8.0_@babylonjs+core@6.8.0
+      '@babylonjs/serializers': 6.8.0_5behteowuvpj63blv4mft4cmfu
+      '@fortawesome/fontawesome-svg-core': 6.4.0
+      '@fortawesome/free-regular-svg-icons': 6.4.0
+      '@fortawesome/free-solid-svg-icons': 6.4.0
+    dev: true
+
   /@babylonjs/inspector/6.8.0_twj2zgqov57fdeed7m5kivh3cy:
     resolution: {integrity: sha512-tu3nb0l7xSYXkTaKAnP7zBL34qR9J0op+NzOn4Y1C9RcY91yH3YfLTdoo4pFA0K5NaS99W0nAIjCcrS2BPBmMQ==}
     peerDependencies:
@@ -1210,9 +1309,9 @@ packages:
       '@babylonjs/core': 6.8.0
       '@babylonjs/gui': 6.8.0_@babylonjs+core@6.8.0
       '@babylonjs/gui-editor': 6.8.0_rk3ukveargtmfmjnndhxvg5b2y
-      '@babylonjs/loaders': 6.8.0_5behteowuvpj63blv4mft4cmfu
+      '@babylonjs/loaders': 6.8.0_2trhnvpb3cdbhxvtrstotwqzse
       '@babylonjs/materials': 6.8.0_@babylonjs+core@6.8.0
-      '@babylonjs/serializers': 6.8.0_5behteowuvpj63blv4mft4cmfu
+      '@babylonjs/serializers': 6.8.0_2trhnvpb3cdbhxvtrstotwqzse
       '@fortawesome/fontawesome-svg-core': 6.4.0
       '@fortawesome/free-regular-svg-icons': 6.4.0
       '@fortawesome/free-solid-svg-icons': 6.4.0
@@ -2266,7 +2365,7 @@ packages:
     engines: {node: ^10.13.0 || ^12.13.0 || ^14.15.0 || >=15.0.0}
     dependencies:
       callsites: 3.1.0
-      graceful-fs: 4.2.8
+      graceful-fs: 4.2.11
       source-map: 0.6.1
     dev: true
 
@@ -5236,7 +5335,7 @@ packages:
     dev: true
 
   /dedent/0.7.0:
-    resolution: {integrity: sha1-JJXduvbrh0q7Dhvp3yLS5aVEMmw=}
+    resolution: {integrity: sha512-Q6fKUPqnAHAyhiUgFU7BUzLiv0kd8saH9al7tnu5Q/okj6dnupxyTgFIBjVzJATdfIAm9NAsvXNzjaKa+bxVyA==}
     dev: true
 
   /deep-eql/4.1.3:
@@ -9117,7 +9216,7 @@ packages:
   /jsonfile/4.0.0:
     resolution: {integrity: sha512-m6F1R3z8jjlf2imQHS2Qez5sjKWQzbuuhuJ/FKYFRZvPE3PuHcSMVZzfsLhGVOkfd20obL5SWEBew5ShlquNxg==}
     optionalDependencies:
-      graceful-fs: 4.2.8
+      graceful-fs: 4.2.11
     dev: true
 
   /jsonfile/6.1.0:
@@ -11631,7 +11730,7 @@ packages:
     engines: {node: '>=8'}
     dependencies:
       '@istanbuljs/schema': 0.1.3
-      glob: 7.2.0
+      glob: 7.2.3
       minimatch: 3.0.4
     dev: true
 

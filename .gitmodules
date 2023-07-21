@@ -2,3 +2,7 @@
 	path = packages/awesome-babylonjs/babylon-mtoon-material
 	url = https://github.com/Spencer17x/babylon-mtoon-material.git
 	branch = 6.x
+[submodule "packages/awesome-babylonjs/babylon-vrm-loader"]
+	path = packages/awesome-babylonjs/babylon-vrm-loader
+	url = https://github.com/spencer17x/babylon-vrm-loader.git
+	branch = 6.x
