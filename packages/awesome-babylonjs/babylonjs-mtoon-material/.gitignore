@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+test/main.js
+test/main.js.map
+test/vendors~main.js
+test/vendors~main.js.map
