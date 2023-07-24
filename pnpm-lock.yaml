@@ -127,7 +127,7 @@ importers:
       '@typescript-eslint/parser': ~5.16.0
       ansi-html-community: ^0.0.8
       babylonjs-gltf2interface: 6.8.0
-      babylonjs-mtoon-material: workspace:0.0.8
+      babylonjs-mtoon-material: workspace:*
       cz-conventional-changelog: 3.3.0
       eslint: ^8.11.0
       eslint-config-prettier: ~8.5.0
