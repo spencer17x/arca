@@ -11,8 +11,7 @@
     "build": "rm -rf dist && tsc && ts-node esbuild.config.ts",
     "test": "jest -c jest.config.ts",
     "coverage": "jest -c jest.config.ts --coverage",
-    "test:watch": "jest -c jest.config.ts --coverage --watch",
-    "postinstall": "ts-node tools/init"
+    "test:watch": "jest -c jest.config.ts --coverage --watch"
   },
   "dependencies": {
     "esbuild": "^0.14.11"

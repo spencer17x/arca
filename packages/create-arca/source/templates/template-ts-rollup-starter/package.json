@@ -4,7 +4,6 @@
   "main": "build/--libraryname--.umd.js",
   "module": "build/--libraryname--.esm.js",
   "types": "build/types/index.d.ts",
-  "author": "--username-- <--usermail-->",
   "repository": {
     "type": "git",
     "url": ""
@@ -19,8 +18,7 @@
     "build": "rimraf build && rollup -c rollup.config.ts --silent --environment NODE_ENV:prod",
     "test": "jest -c jest.config.ts",
     "coverage": "jest -c jest.config.ts --coverage",
-    "test:watch": "jest -c jest.config.ts --coverage --watch",
-    "postinstall": "ts-node tools/init"
+    "test:watch": "jest -c jest.config.ts --coverage --watch"
   },
   "license": "MIT",
   "devDependencies": {

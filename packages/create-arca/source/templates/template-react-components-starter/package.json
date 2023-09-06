@@ -1,0 +1,33 @@
+{
+  "name": "--libraryname--",
+  "version": "0.0.0",
+  "main": "dist/index.js",
+  "files": [
+    "dist",
+    "README.md",
+    "package.json"
+  ],
+  "scripts": {
+    "build": "rm -rf dist && tsc && ts-node esbuild.config.ts",
+    "test": "jest -c jest.config.ts",
+    "coverage": "jest -c jest.config.ts --coverage",
+    "test:watch": "jest -c jest.config.ts --coverage --watch"
+  },
+  "dependencies": {
+    "esbuild": "^0.14.11"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.9",
+    "terser": "^5.10.0",
+    "ts-node": "^10.0.0",
+    "typescript": "^4.5.4",
+    "prompt": "^1.1.0",
+    "shelljs": "^0.8.4",
+    "replace-in-file": "^6.2.0",
+    "colors": "^1.4.0",
+    "@jest/types": "^27.0.0",
+    "@types/jest": "^27.0.0",
+    "jest": "^27.0.0",
+    "ts-jest": "^27.0.0"
+  }
+}

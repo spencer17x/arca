@@ -15,7 +15,7 @@ const sourcemap = !isProd;
 
 const libraryName = '--libraryname--';
 
-const outputName = '--UpperCamelCase--'
+const outputName = libraryName.replace(/-(\w)/g, (_match, p1) => p1.toUpperCase());
 
 console.log(`Building ${libraryName} in environment: ${buildEnvironment}`);
 
