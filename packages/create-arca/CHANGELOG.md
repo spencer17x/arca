@@ -1,3 +1,12 @@
+# [2.0.0-beta.0](https://github.com/spencer17x/arca/compare/create-arca@1.2.22...create-arca@2.0.0-beta.0) (2023-09-06)
+
+
+### Features
+
+* **create-arca:** support vite、built-in template and more ([d9c5e26](https://github.com/spencer17x/arca/commit/d9c5e2640d1460e7b7df325e8b931f6698d96668))
+
+
+
 ## [1.2.22](https://github.com/Spencer17x/arca/compare/create-arca@1.2.21...create-arca@1.2.22) (2023-06-21)
 
 
