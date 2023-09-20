@@ -27,12 +27,12 @@ export const setupConfig = (config: {
 
 	if (eslint) {
 		const src = path.resolve(__dirname, '../source/configs/_eslint');
-		const dest = path.resolve(process.cwd(), `${projectName}/.eslintrc.js`);
+		const dest = path.resolve(process.cwd(), `${projectName}/.eslintrc.cjs`);
 		fs.copyFileSync(src, dest);
 	}
 	if (prettier) {
 		const src = path.resolve(__dirname, '../source/configs/_prettier');
-		const dest = path.resolve(process.cwd(), `${projectName}/.prettierrc.js`);
+		const dest = path.resolve(process.cwd(), `${projectName}/.prettierrc.cjs`);
 		fs.copyFileSync(src, dest);
 	}
 };

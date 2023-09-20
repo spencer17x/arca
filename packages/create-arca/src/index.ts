@@ -8,7 +8,7 @@ const init = async () => {
 		{
 			type: 'confirm',
 			name: 'isCreate',
-			message: 'Create a new repository?',
+			message: 'Create a new project?',
 			initial: true,
 		},
 		{
