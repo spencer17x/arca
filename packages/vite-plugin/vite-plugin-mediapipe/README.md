@@ -37,5 +37,6 @@ export default defineConfig({
 - @mediapipe/camera_utils
 - @mediapipe/drawing_utils
 - @mediapipe/holistic
+- @mediapipe/face_detection
 
 If you need support, you can raise an issue or pr, I will deal with it immediately

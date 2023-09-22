@@ -21,9 +21,6 @@ export const mediapipe = (config?: Record<string, string[]>): PluginOption => {
 					'lerp',
 				],
 				'holistic.js': [
-					'Solution',
-					'Solution',
-					'OptionType',
 					'Holistic',
 					'FACE_GEOMETRY',
 					'FACEMESH_LIPS',
@@ -44,6 +41,10 @@ export const mediapipe = (config?: Record<string, string[]>): PluginOption => {
 					'POSE_LANDMARKS_NEUTRAL',
 					'matrixDataToMatrix',
 					'VERSION',
+				],
+				'face_detection.js': [
+					'VERSION',
+					'FaceDetection',
 				],
 				...config
 			};
