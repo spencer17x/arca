@@ -37,23 +37,23 @@ const init = async () => {
 			initial: true,
 		},
 		{
-			type: 'select',
+			type: (_prev, values) => values.isCreate ? 'select' : null,
 			name: 'type',
 			message: 'Select project type:',
 			choices: [
 				{ title: 'template', value: 'template' },
 				{ title: 'vite', value: 'vite' },
-				{ title: 'monorepo', value: 'monorepo' },
+				// { title: 'monorepo', value: 'monorepo' },
 			]
 		},
 		{
-			type: (_prev, values) => values.type === 'template' ? 'select' : null,
+			type: prev => prev === 'template' ? 'select' : null,
 			name: 'template',
 			message: 'Select template:',
 			choices: readTemplates().map(name => ({ title: name, value: name })),
 		},
 		{
-			type: 'select',
+			type: (_prev, values) => values.isCreate ? 'select' : null,
 			name: 'packageManager',
 			message: 'Select package manager:',
 			choices: [
@@ -68,18 +68,20 @@ const init = async () => {
 		},
 	});
 
-	const projectName = result.isCreate ? result.name : '.';
+	const projectName = result.name;
 
 	if (result.overwrite) {
 		fs.rmSync(projectName, { recursive: true });
 	}
 
-	createProject({
-		packageManager: result.packageManager,
-		type: result.type,
-		template: result.template,
-		projectName,
-	});
+	if (result.isCreate) {
+		createProject({
+			packageManager: result.packageManager,
+			type: result.type,
+			template: result.template,
+			projectName,
+		});
+	}
 
 	setupConfig({
 		projectName,
