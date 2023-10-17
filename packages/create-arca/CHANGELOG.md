@@ -1,3 +1,13 @@
+# [2.0.0-beta.1](https://github.com/spencer17x/arca/compare/create-arca@2.0.0-beta.0...create-arca@2.0.0-beta.1) (2023-10-17)
+
+
+### Bug Fixes
+
+* **create-arca:** fix only create rule file ([f5c7200](https://github.com/spencer17x/arca/commit/f5c72004c23eeab7fb431461a6db5c8d10322397))
+* **create-arca:** update config file format ([b26284f](https://github.com/spencer17x/arca/commit/b26284fef0ae9d718b37ecd02b1ad057477f800c))
+
+
+
 # [2.0.0-beta.0](https://github.com/spencer17x/arca/compare/create-arca@1.2.22...create-arca@2.0.0-beta.0) (2023-09-06)
 
 
