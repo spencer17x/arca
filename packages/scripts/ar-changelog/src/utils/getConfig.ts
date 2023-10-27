@@ -6,6 +6,9 @@ import { ArChangelogConfig } from '../types';
 
 const configFiles = [
   'ar-changelog.config.js',
+  'ar-changelog.config.cjs',
+  'ar.js',
+  'ar.cjs',
 ];
 
 /**
