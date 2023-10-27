@@ -1,3 +1,12 @@
+# [4.1.0-beta.0](https://github.com/spencer17x/arca/compare/ar-changelog@4.0.2...ar-changelog@4.1.0-beta.0) (2023-10-27)
+
+
+### Features
+
+* **ar-changelog:** add config js ([f06644f](https://github.com/spencer17x/arca/commit/f06644fe8b76e11c02d04c12ab429ac38979e254))
+
+
+
 ## [4.0.2](https://github.com/spencer17x/arca/compare/ar-changelog@4.0.1...ar-changelog@4.0.2) (2023-07-24)
 
 
