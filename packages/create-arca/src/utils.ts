@@ -18,6 +18,18 @@ export const readTemplates = () => {
 	return fs.readdirSync(path.resolve(__dirname, '../source/templates'));
 };
 
+export const addDevDependencies = (projectName: string, devDependencies: Record<string, string>) => {
+	const packageJsonPath = path.resolve(process.cwd(), `${projectName}/package.json`);
+	const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf-8'));
+	fs.writeFileSync(packageJsonPath, JSON.stringify({
+		...packageJson,
+		devDependencies: {
+			...packageJson.devDependencies,
+			...devDependencies,
+		}
+	}, null, 2));
+};
+
 export const setupConfig = (config: {
 	projectName: string,
 	eslint: boolean,
@@ -29,11 +41,18 @@ export const setupConfig = (config: {
 		const src = path.resolve(__dirname, '../source/configs/_eslint');
 		const dest = path.resolve(process.cwd(), `${projectName}/.eslintrc.cjs`);
 		fs.copyFileSync(src, dest);
+		addDevDependencies(projectName, {
+			'eslint-plugin-simple-import-sort': '^10.0.0',
+		});
 	}
+
 	if (prettier) {
 		const src = path.resolve(__dirname, '../source/configs/_prettier');
 		const dest = path.resolve(process.cwd(), `${projectName}/.prettierrc.cjs`);
 		fs.copyFileSync(src, dest);
+		addDevDependencies(projectName, {
+			'prettier': '^3.0.3',
+		});
 	}
 };
 
