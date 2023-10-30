@@ -1,3 +1,12 @@
+# [2.0.0-beta.2](https://github.com/spencer17x/arca/compare/create-arca@2.0.0-beta.1...create-arca@2.0.0-beta.2) (2023-10-30)
+
+
+### Bug Fixes
+
+* **create-arca:** add devDependencies ([1177064](https://github.com/spencer17x/arca/commit/1177064dc67eac2b6f3be0bbb9e5518b9e8b5d12))
+
+
+
 # [2.0.0-beta.1](https://github.com/spencer17x/arca/compare/create-arca@2.0.0-beta.0...create-arca@2.0.0-beta.1) (2023-10-17)
 
 
