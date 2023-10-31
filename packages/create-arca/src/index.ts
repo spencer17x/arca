@@ -2,6 +2,8 @@ import prompts from 'prompts';
 import { createProject, readTemplates, setupConfig } from './utils';
 import { red } from 'kolorist';
 import fs from 'fs';
+import path from 'path';
+import { eslintConfigFiles, prettierConfigFiles } from './variables';
 
 const init = async () => {
 	const result = await prompts([
@@ -20,7 +22,7 @@ const init = async () => {
 		},
 		{
 			type: prev => fs.existsSync(prev) ? 'confirm' : null,
-			name: 'overwrite',
+			name: 'overwriteName',
 			message: prev => `Target directory ${prev} already exists. Overwrite?`,
 			initial: true,
 		},
@@ -31,9 +33,25 @@ const init = async () => {
 			initial: true,
 		},
 		{
+			name: 'overwriteEslint',
+			type: (_prev, values) => eslintConfigFiles.some(file => {
+				return fs.existsSync(path.join(values.name, file));
+			}) ? 'confirm' : null,
+			message: 'Target directory already has eslint config file. Overwrite?',
+			initial: true,
+		},
+		{
 			type: 'confirm',
 			name: 'prettier',
 			message: 'Use prettier?',
+			initial: true,
+		},
+		{
+			name: 'overwritePrettier',
+			type: (_prev, values) => prettierConfigFiles.some(file => {
+				return fs.existsSync(path.join(values.name, file));
+			}) ? 'confirm' : null,
+			message: 'Target directory already has prettier config file. Overwrite?',
 			initial: true,
 		},
 		{
@@ -70,7 +88,7 @@ const init = async () => {
 
 	const projectName = result.name;
 
-	if (result.overwrite) {
+	if (result.overwriteName) {
 		fs.rmSync(projectName, { recursive: true });
 	}
 

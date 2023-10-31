@@ -2,6 +2,7 @@ import fs from 'fs';
 import path from 'path';
 import { spawnSync } from 'child_process';
 import replace from 'replace-in-file';
+import { eslintConfigFiles, prettierConfigFiles } from './variables';
 
 export const runCMD = (command: string, args: string[]) => {
 	return spawnSync(
@@ -44,6 +45,9 @@ export const setupConfig = (config: {
 		addDevDependencies(projectName, {
 			'eslint-plugin-simple-import-sort': '^10.0.0',
 		});
+		eslintConfigFiles.forEach(file => {
+			fs.rmSync(path.resolve(process.cwd(), `${projectName}/${file}`));
+		})
 	}
 
 	if (prettier) {
@@ -53,6 +57,9 @@ export const setupConfig = (config: {
 		addDevDependencies(projectName, {
 			'prettier': '^3.0.3',
 		});
+		prettierConfigFiles.forEach(file => {
+			fs.rmSync(path.resolve(process.cwd(), `${projectName}/${file}`));
+		})
 	}
 };
 
