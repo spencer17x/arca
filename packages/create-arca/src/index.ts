@@ -34,8 +34,8 @@ const init = async () => {
 		},
 		{
 			name: 'overwriteEslint',
-			type: (_prev, values) => eslintConfigFiles.some(file => {
-				return fs.existsSync(path.join(values.name, file));
+			type: (prev, values) => eslintConfigFiles.some(file => {
+				return prev && fs.existsSync(path.join(values.name || '.', file));
 			}) ? 'confirm' : null,
 			message: 'Target directory already has eslint config file. Overwrite?',
 			initial: true,
@@ -48,8 +48,8 @@ const init = async () => {
 		},
 		{
 			name: 'overwritePrettier',
-			type: (_prev, values) => prettierConfigFiles.some(file => {
-				return fs.existsSync(path.join(values.name, file));
+			type: (prev, values) => prettierConfigFiles.some(file => {
+				return prev && fs.existsSync(path.join(values.name || '.', file));
 			}) ? 'confirm' : null,
 			message: 'Target directory already has prettier config file. Overwrite?',
 			initial: true,

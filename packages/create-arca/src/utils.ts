@@ -46,7 +46,10 @@ export const setupConfig = (config: {
 			'eslint-plugin-simple-import-sort': '^10.0.0',
 		});
 		eslintConfigFiles.forEach(file => {
-			fs.rmSync(path.resolve(process.cwd(), `${projectName}/${file}`));
+			const filePath = path.resolve(process.cwd(), `${projectName}/${file}`);
+			if (fs.existsSync(filePath)) {
+				fs.rmSync(filePath);
+			}
 		})
 	}
 
@@ -58,7 +61,10 @@ export const setupConfig = (config: {
 			'prettier': '^3.0.3',
 		});
 		prettierConfigFiles.forEach(file => {
-			fs.rmSync(path.resolve(process.cwd(), `${projectName}/${file}`));
+			const filePath = path.resolve(process.cwd(), `${projectName}/${file}`);
+			if (fs.existsSync(filePath)) {
+				fs.rmSync(filePath);
+			}
 		})
 	}
 };
