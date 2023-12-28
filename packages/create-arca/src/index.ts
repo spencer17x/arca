@@ -86,25 +86,32 @@ const init = async () => {
 		},
 	});
 
-	const projectName = result.name;
+	const {
+		name: projectName,
+		eslint,prettier,
+		isCreate, packageManager, type, template,
+		overwriteName, overwriteEslint, overwritePrettier
+	} = result;
 
-	if (result.overwriteName) {
+	if (overwriteName) {
 		fs.rmSync(projectName, { recursive: true });
 	}
 
-	if (result.isCreate) {
+	if (isCreate) {
 		createProject({
-			packageManager: result.packageManager,
-			type: result.type,
-			template: result.template,
+			packageManager,
+			type,
+			template,
 			projectName,
 		});
 	}
 
 	setupConfig({
 		projectName,
-		eslint: result.eslint,
-		prettier: result.prettier,
+		eslint,
+		prettier,
+		overwriteEslint,
+		overwritePrettier,
 	});
 };
 

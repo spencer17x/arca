@@ -34,9 +34,32 @@ export const addDevDependencies = (projectName: string, devDependencies: Record<
 export const setupConfig = (config: {
 	projectName: string,
 	eslint: boolean,
-	prettier: boolean
+	prettier: boolean,
+	overwriteEslint: boolean,
+	overwritePrettier: boolean,
 }) => {
-	const { projectName = '.', eslint, prettier } = config;
+	const {
+		projectName = '.',
+		eslint, prettier,
+		overwriteEslint, overwritePrettier
+	} = config;
+	if (overwriteEslint) {
+		eslintConfigFiles.forEach(file => {
+			const filePath = path.resolve(process.cwd(), `${projectName}/${file}`);
+			if (fs.existsSync(filePath)) {
+				fs.rmSync(filePath);
+			}
+		});
+	}
+
+	if (overwritePrettier) {
+		prettierConfigFiles.forEach(file => {
+			const filePath = path.resolve(process.cwd(), `${projectName}/${file}`);
+			if (fs.existsSync(filePath)) {
+				fs.rmSync(filePath);
+			}
+		});
+	}
 
 	if (eslint) {
 		const src = path.resolve(__dirname, '../source/configs/_eslint');
@@ -45,13 +68,8 @@ export const setupConfig = (config: {
 		addDevDependencies(projectName, {
 			'eslint-plugin-simple-import-sort': '^10.0.0',
 		});
-		eslintConfigFiles.forEach(file => {
-			const filePath = path.resolve(process.cwd(), `${projectName}/${file}`);
-			if (fs.existsSync(filePath)) {
-				fs.rmSync(filePath);
-			}
-		})
 	}
+
 
 	if (prettier) {
 		const src = path.resolve(__dirname, '../source/configs/_prettier');
@@ -60,12 +78,6 @@ export const setupConfig = (config: {
 		addDevDependencies(projectName, {
 			'prettier': '^3.0.3',
 		});
-		prettierConfigFiles.forEach(file => {
-			const filePath = path.resolve(process.cwd(), `${projectName}/${file}`);
-			if (fs.existsSync(filePath)) {
-				fs.rmSync(filePath);
-			}
-		})
 	}
 };
 
